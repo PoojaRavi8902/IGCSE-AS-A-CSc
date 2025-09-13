@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>AS Level Computer Science - Chapter 4 Assessment (Processor Fundamentals)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root{
+      --accent: #0b66a3;
+      --accent-2: #0a4f7a;
+      --card: #ffffff;
+      --muted: #f6fbff;
+    }
+    body { font-family: Inter, Arial, Helvetica, sans-serif; margin:18px; background:#f4f7fb; color:#111; line-height:1.5; }
+    header { text-align:center; margin-bottom:18px; }
+    h1 { margin:6px 0; color:var(--accent-2); }
+    h2 { margin:4px 0 12px; color:var(--accent); }
+    .credit { font-style:italic; color:#333; margin-bottom:8px; }
+    .section { background:var(--card); border:1px solid rgba(10,10,10,0.06); border-left:6px solid var(--accent); padding:14px; border-radius:8px; margin-bottom:18px; }
+    .sub { font-weight:700; color:var(--accent-2); margin-bottom:8px; }
+    ol.questions { padding-left:18px; }
+    li.q { margin:12px 0; padding:10px; border-radius:6px; background:#fff; border:1px solid #e6eef6; }
+    .mcq-option { display:block; margin:6px 0; }
+    .btn { background:var(--accent); color:#fff; border:none; padding:10px 14px; border-radius:6px; cursor:pointer; font-weight:700; }
+    .btn:disabled { opacity:0.55; cursor:default; }
+    .result { margin-top:10px; font-weight:700; }
+    .answer { display:none; margin-top:10px; padding:12px; border-left:4px solid #2ca58d; background:#e9fffa; border-radius:6px; white-space:pre-wrap; }
+    textarea { width:100%; min-height:140px; padding:10px; margin-top:8px; font-family:inherit; font-size:14px; border:1px solid #ccdcee; border-radius:6px; }
+    .meta { font-size:0.95em; color:#444; margin-top:6px; }
+    a { color:var(--accent-2); text-decoration:none; }
+    .notes { font-size:0.95em; color:#333; margin-top:8px; }
+    details { margin-top:8px; padding:8px; background:#fbfeff; border-radius:6px; border:1px solid #e6f5fb; }
+    @media(min-width:900px){ .two-col{ display:grid; grid-template-columns:1fr 1fr; gap:12px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AS Level Computer Science (9618)</h1>
+    <h2>Chapter 4 — Processor Fundamentals: Assessment</h2>
+    <p class="credit">Prepared by Ravi Raju</p>
+    <p class="meta">Instructions: Complete all three parts. 1) Part A (15 MCQs) is auto-graded when you press <strong>Submit MCQs</strong>. 2) Part B (15 short answers) — model answers will be revealed when you press <strong>Reveal Short Answers</strong>. 3) Part C (15 exam-style) — type answers in the textareas; model solutions will be revealed when you press <strong>Reveal Model Answers</strong>. <strong>No reset</strong> buttons are provided.</p>
+  </header>
+
+  <!-- PART A: MCQs -->
+  <section class="section" id="partA">
+    <div class="sub">Part A — Multiple Choice Questions (15)</div>
+    <p class="notes">Choose the single best answer. When ready click <strong>Submit MCQs</strong>. The MCQs will be locked after submission.</p>
+
+    <form id="mcqForm">
+      <ol class="questions">
+        <li class="q">
+          <div><strong>1.</strong> Which logic gate outputs 1 only when both inputs are 1?</div>
+          <label class="mcq-option"><input type="radio" name="q1" value="A"> A. OR</label>
+          <label class="mcq-option"><input type="radio" name="q1" value="B"> B. AND</label>
+          <label class="mcq-option"><input type="radio" name="q1" value="C"> C. XOR</label>
+          <label class="mcq-option"><input type="radio" name="q1" value="D"> D. NOR</label>
+        </li>
+
+        <li class="q">
+          <div><strong>2.</strong> Which operator is TRUE when exactly one input is TRUE?</div>
+          <label class="mcq-option"><input type="radio" name="q2" value="A"> A. XOR</label>
+          <label class="mcq-option"><input type="radio" name="q2" value="B"> B. NAND</label>
+          <label class="mcq-option"><input type="radio" name="q2" value="C"> C. OR</label>
+          <label class="mcq-option"><input type="radio" name="q2" value="D"> D. NOR</label>
+        </li>
+
+        <li class="q">
+          <div><strong>3.</strong> What is the output of NOT(0)?</div>
+          <label class="mcq-option"><input type="radio" name="q3" value="A"> A. 0</label>
+          <label class="mcq-option"><input type="radio" name="q3" value="B"> B. 1</label>
+        </li>
+
+        <li class="q">
+          <div><strong>4.</strong> NAND is equivalent to which expression?</div>
+          <label class="mcq-option"><input type="radio" name="q4" value="A"> A. NOT(A OR B)</label>
+          <label class="mcq-option"><input type="radio" name="q4" value="B"> B. NOT(A AND B)</label>
+          <label class="mcq-option"><input type="radio" name="q4" value="C"> C. A XOR B</label>
+          <label class="mcq-option"><input type="radio" name="q4" value="D"> D. A AND B</label>
+        </li>
+
+        <li class="q">
+          <div><strong>5.</strong> How many rows are there in a truth table for a circuit with 3 inputs?</div>
+          <label class="mcq-option"><input type="radio" name="q5" value="A"> A. 6</label>
+          <label class="mcq-option"><input type="radio" name="q5" value="B"> B. 8</label>
+          <label class="mcq-option"><input type="radio" name="q5" value="C"> C. 16</label>
+          <label class="mcq-option"><input type="radio" name="q5" value="D"> D. 4</label>
+        </li>
+
+        <li class="q">
+          <div><strong>6.</strong> Which gate(s) form a functionally complete set by themselves?</div>
+          <label class="mcq-option"><input type="radio" name="q6" value="A"> A. AND only</label>
+          <label class="mcq-option"><input type="radio" name="q6" value="B"> B. OR only</label>
+          <label class="mcq-option"><input type="radio" name="q6" value="C"> C. NAND only</label>
+          <label class="mcq-option"><input type="radio" name="q6" value="D"> D. XOR only</label>
+        </li>
+
+        <li class="q">
+          <div><strong>7.</strong> De Morgan's theorem transforms NOT(A AND B) into:</div>
+          <label class="mcq-option"><input type="radio" name="q7" value="A"> A. NOT A AND NOT B</label>
+          <label class="mcq-option"><input type="radio" name="q7" value="B"> B. NOT A OR NOT B</label>
+          <label class="mcq-option"><input type="radio" name="q7" value="C"> C. A OR B</label>
+          <label class="mcq-option"><input type="radio" name="q7" value="D"> D. A AND B</label>
+        </li>
+
+        <li class="q">
+          <div><strong>8.</strong> A NOR gate outputs 1 when:</div>
+          <label class="mcq-option"><input type="radio" name="q8" value="A"> A. Both inputs are 1</label>
+          <label class="mcq-option"><input type="radio" name="q8" value="B"> B. At least one input is 1</label>
+          <label class="mcq-option"><input type="radio" name="q8" value="C"> C. Both inputs are 0</label>
+          <label class="mcq-option"><input type="radio" name="q8" value="D"> D. Never</label>
+        </li>
+
+        <li class="q">
+          <div><strong>9.</strong> Which expression is equivalent to (A AND B) OR (A AND C)?</div>
+          <label class="mcq-option"><input type="radio" name="q9" value="A"> A. A AND (B OR C)</label>
+          <label class="mcq-option"><input type="radio" name="q9" value="B"> B. (A OR B) AND (A OR C)</label>
+          <label class="mcq-option"><input type="radio" name="q9" value="C"> C. A OR (B AND C)</label>
+          <label class="mcq-option"><input type="radio" name="q9" value="D"> D. (A AND B) AND (A AND C)</label>
+        </li>
+
+        <li class="q">
+          <div><strong>10.</strong> If A=1, B=0, C=1, evaluate X = (A XOR B) AND (NOT C).</div>
+          <label class="mcq-option"><input type="radio" name="q10" value="A"> A. 0</label>
+          <label class="mcq-option"><input type="radio" name="q10" value="B"> B. 1</label>
+        </li>
+
+        <li class="q">
+          <div><strong>11.</strong> Which of the following is an example of a problem statement converted to a logic expression?</div>
+          <label class="mcq-option"><input type="radio" name="q11" value="A"> A. Light_on = Daytime AND Motion_detected</label>
+          <label class="mcq-option"><input type="radio" name="q11" value="B"> B. Light_on = Daytime OR Motion_detected</label>
+          <label class="mcq-option"><input type="radio" name="q11" value="C"> C. Light_on = NOT(Daylight)</label>
+          <label class="mcq-option"><input type="radio" name="q11" value="D"> D. None of the above</label>
+        </li>
+
+        <li class="q">
+          <div><strong>12.</strong> Which gate would you use to detect equality of two single-bit signals (output 1 when bits are equal)?</div>
+          <label class="mcq-option"><input type="radio" name="q12" value="A"> A. XOR</label>
+          <label class="mcq-option"><input type="radio" name="q12" value="B"> B. XNOR (equivalence)</label>
+          <label class="mcq-option"><input type="radio" name="q12" value="C"> C. OR</label>
+          <label class="mcq-option"><input type="radio" name="q12" value="D"> D. NAND</label>
+        </li>
+
+        <li class="q">
+          <div><strong>13.</strong> The fastest way to check the output for a 4-input circuit on paper is to:</div>
+          <label class="mcq-option"><input type="radio" name="q13" value="A"> A. Draw the circuit and compute intermediate outputs for each input combination</label>
+          <label class="mcq-option"><input type="radio" name="q13" value="B"> B. Guess</label>
+          <label class="mcq-option"><input type="radio" name="q13" value="C"> C. Use only final expression without workspace</label>
+          <label class="mcq-option"><input type="radio" name="q13" value="D"> D. Rely on symmetry only</label>
+        </li>
+
+        <li class="q">
+          <div><strong>14.</strong> To convert a logic circuit to a logic expression the first step is:</div>
+          <label class="mcq-option"><input type="radio" name="q14" value="A"> A. Build the truth table for the circuit</label>
+          <label class="mcq-option"><input type="radio" name="q14" value="B"> B. Simplify expression immediately</label>
+          <label class="mcq-option"><input type="radio" name="q14" value="C"> C. Replace gates with resistors</label>
+          <label class="mcq-option"><input type="radio" name="q14" value="D"> D. None of the above</label>
+        </li>
+
+        <li class="q">
+          <div><strong>15.</strong> Which operator is used when you need the output to be 1 if both inputs are NOT both 1?</div>
+          <label class="mcq-option"><input type="radio" name="q15" value="A"> A. NAND</label>
+          <label class="mcq-option"><input type="radio" name="q15" value="B"> B. NOR</label>
+          <label class="mcq-option"><input type="radio" name="q15" value="C"> C. XOR</label>
+          <label class="mcq-option"><input type="radio" name="q15" value="D"> D. XNOR</label>
+        </li>
+      </ol>
+
+      <div style="margin-top:12px;">
+        <button type="button" id="mcqSubmit" class="btn">Submit MCQs</button>
+        <div id="mcqResult" class="result" aria-live="polite"></div>
+      </div>
+    </form>
+  </section>
+
+  <!-- PART B: Short Questions -->
+  <section class="section" id="partB">
+    <div class="sub">Part B — Short Questions (15)</div>
+    <p class="notes">Write brief answers in your notebook. Model answers will be revealed when you press <strong>Reveal Short Answers</strong>.</p>
+
+    <ol class="questions">
+      <li class="q">
+        <div><strong>1.</strong> Define a Boolean proposition and give one example.</div>
+        <div class="answer" id="s1">A Boolean proposition is a statement that can only be TRUE or FALSE. Example: "The temperature is above 25°C." (Either true or false.)</div>
+      </li>
+
+      <li class="q">
+        <div><strong>2.</strong> State the truth table for A AND B.</div>
+        <div class="answer" id="s2">A AND B truth table (A,B → A AND B): 00→0, 01→0, 10→0, 11→1.</div>
+      </li>
+
+      <li class="q">
+        <div><strong>3.</strong> Write the Boolean expression for: "Switch on the heater if it is cold OR humidity is high."</div>
+        <div class="answer" id="s3">Heater = Cold OR High_Humidity.</div>
+      </li>
+
+      <li class="q">
+        <div><strong>4.</strong> What does NOT(A OR B) equal by De Morgan's law?</div>
+        <div class="answer" id="s4">NOT(A OR B) = (NOT A) AND (NOT B).</div>
+      </li>
+
+      <li class="q">
+        <div><strong>5.</strong> Give one practical example of an XOR gate.</div>
+        <div class="answer" id="s5">XOR can be used for "odd parity" checking — output 1 if an odd number of inputs are 1 (e.g., simple error-detection/parity circuits).</div>
+      </li>
+
+      <li class="q">
+        <div><strong>6.</strong> How do NAND and NOR gates relate to AND/OR gates?</div>
+        <div class="answer" id="s6">NAND is the complement of AND (NAND = NOT(AND)). NOR is the complement of OR (NOR = NOT(OR)).</div>
+      </li>
+
+      <li class="q">
+        <div><strong>7.</strong> What is the minimal number of rows for a 2-input truth table? How many for 4 inputs?</div>
+        <div class="answer" id="s7">For 2 inputs: 4 rows (2^2). For 4 inputs: 16 rows (2^4).</div>
+      </li>
+
+      <li class="q">
+        <div><strong>8.</strong> Explain briefly why NAND alone is useful in circuit design.</div>
+        <div class="answer" id="s8">NAND is functionally complete: any Boolean function can be implemented using only NAND gates, which simplifies manufacturing and design.</div>
+      </li>
+
+      <li class="q">
+        <div><strong>9.</strong> Convert the expression X = A AND (B OR C) into a short verbal problem statement.</div>
+        <div class="answer" id="s9">"X is true if A is true and either B or C (or both) are true." Example: "Start engine if ignition is on AND (brake pressed OR gear in neutral)."</div>
+      </li>
+
+      <li class="q">
+        <div><strong>10.</strong> What is an intermediate workspace column in a truth table and why is it useful?</div>
+        <div class="answer" id="s10">An intermediate workspace column records the output of sub-parts of a circuit (e.g., M = A AND B) so you can compute the final output step-by-step and avoid mistakes.</div>
+      </li>
+
+      <li class="q">
+        <div><strong>11.</strong> State the truth table row count formula for n inputs.</div>
+        <div class="answer" id="s11">Number of rows = 2^n (two to the power of number of inputs n).</div>
+      </li>
+
+      <li class="q">
+        <div><strong>12.</strong> Give the truth table for XOR (A XOR B).</div>
+        <div class="answer" id="s12">A XOR B: 00→0, 01→1, 10→1, 11→0.</div>
+      </li>
+
+      <li class="q">
+        <div><strong>13.</strong> Why might a designer prefer to draw a circuit symbol rather than write an expression?</div>
+        <div class="answer" id="s13">Circuits provide a visual representation that makes flows, intermediate signals and hardware mapping clearer and easier to implement/verify.</div>
+      </li>
+
+      <li class="q">
+        <div><strong>14.</strong> What is the output of NOR when inputs are A=0 and B=0?</div>
+        <div class="answer" id="s14">NOR outputs 1 when both inputs are 0, so output = 1.</div>
+      </li>
+
+      <li class="q">
+        <div><strong>15.</strong> Give the Boolean expression that corresponds to: "Alarm if window open AND (intruder sensor OR break-glass sensor)."</div>
+        <div class="answer" id="s15">Alarm = Window_open AND (Intruder_sensor OR Break_glass_sensor).</div>
+      </li>
+    </ol>
+
+    <div style="margin-top:12px;">
+      <button id="shortReveal" class="btn">Reveal Short Answers</button>
+    </div>
+  </section>
+
+  <!-- PART C: Exam-style Questions -->
+  <section class="section" id="partC">
+    <div class="sub">Part C — Exam-style Questions (15)</div>
+    <p class="notes">Write longer answers in the textareas. Model solutions are hidden and will be revealed when you press <strong>Reveal Model Answers</strong>. Your typed answers will remain for teacher review.</p>
+
+    <ol class="questions">
+      <li class="q">
+        <div><strong>1.</strong> Convert the following problem statement into a Boolean expression and then draw the equivalent logic circuit (describe it in words if drawing is not possible here): "Turn on the garden lights if it is dark AND (motion is detected OR manual override is ON)." </div>
+        <textarea id="e1"></textarea>
+        <div class="answer" id="m1">Model solution:
+Expression: Lights = Dark AND (Motion OR Override).
+Circuit (description): An OR gate takes Motion and Override as inputs; its output and Dark feed into an AND gate; AND output is Lights. Truth table: Lights = 1 only when Dark=1 and at least one of Motion or Override =1.</div>
+      </li>
+
+      <li class="q">
+        <div><strong>2.</strong> For A, B, C inputs, construct the truth table for X = (A AND B) OR (NOT C). Show all 8 rows and final X column.</div>
+        <textarea id="e2"></textarea>
+        <div class="answer" id="m2">Model solution (final X column):
+Rows (A B C) → X:
+000 → 1 (NOT C =1)
+001 → 0 (NOT C =0, A AND B =0)
+010 → 1 (NOT C =1)
+011 → 0
+100 → 1
+101 → 0
+110 → 1 (A AND B =1)
+111 → 0
+(Explanation: compute NOT C, compute A AND B, then OR.)</div>
+      </li>
+
+      <li class="q">
+        <div><strong>3.</strong> Show step-by-step how to convert the truth table below to a sum-of-products expression (use the rows that produce 1). Table: inputs A B C; outputs X: rows with 1 are (0,0,1), (0,1,1), (1,0,0).</div>
+        <textarea id="e3"></textarea>
+        <div class="answer" id="m3">Model solution:
+Rows ⇒ minterms:
+(0,0,1) → NOT A AND NOT B AND C
+(0,1,1) → NOT A AND B AND C
+(1,0,0) → A AND NOT B AND NOT C
+Combine with OR:
+X = (NOT A AND NOT B AND C) OR (NOT A AND B AND C) OR (A AND NOT B AND NOT C).
+Optionally factor NOT A AND C from first two terms: X = (NOT A AND C AND (NOT B OR B)) OR (A AND NOT B AND NOT C) = (NOT A AND C) OR (A AND NOT B AND NOT C).</div>
+      </li>
+
+      <li class="q">
+        <div><strong>4.</strong> Use De Morgan's laws to simplify NOT(A OR (B AND C)). Show each step.</div>
+        <textarea id="e4"></textarea>
+        <div class="answer" id="m4">Model solution:
+Start: NOT(A OR (B AND C))
+De Morgan: = (NOT A) AND (NOT (B AND C))
+Apply De Morgan to second: NOT(B AND C) = (NOT B) OR (NOT C)
+So final: = (NOT A) AND ((NOT B) OR (NOT C))
+Optionally distribute: = (NOT A AND NOT B) OR (NOT A AND NOT C).</div>
+      </li>
+
+      <li class="q">
+        <div><strong>5.</strong> Design a truth table and logic expression for: "Safety alarm sounds if both the door sensor and the window sensor trigger, unless the system is in maintenance mode (maintenance disables alarm)." (Inputs: Door, Window, Maintenance)</div>
+        <textarea id="e5"></textarea>
+        <div class="answer" id="m5">Model solution:
+Expression: Alarm = (Door AND Window) AND (NOT Maintenance)
+Truth table rows where Alarm =1: Door=1,Window=1,Maintenance=0 → Alarm=1. All other combinations Alarm=0.
+You can also write Alarm = NOT(Maintenance) AND Door AND Window.</div>
+      </li>
+
+      <li class="q">
+        <div><strong>6.</strong> Explain why NAND and NOR are called universal gates and give a simple example of implementing NOT using NAND only.</div>
+        <textarea id="e6"></textarea>
+        <div class="answer" id="m6">Model solution:
+Universal gates: NAND and NOR are functionally complete — any Boolean function can be built using only NANDs or only NORs. Example: NOT A using NAND: connect both inputs of a NAND gate to A → output = NOT(A AND A) = NOT A. So single NAND with tied inputs produces inversion.</div>
+      </li>
+
+      <li class="q">
+        <div><strong>7.</strong> A circuit has intermediate nodes M = A AND B, N = NOT C, P = M OR N. Explain how to fill a truth table with workspace columns and why partial checking (e.g., all rows with C=0) can speed verification.</div>
+        <textarea id="e7"></textarea>
+        <div class="answer" id="m7">Model solution:
+Include columns for A,B,C,M,N,P. Compute M from A,B; N from C; P from M,N. Partial checks: if some path forces output 0 for a whole subset (e.g., if C=0 sets N=1 making P=1 regardless of M), you can inspect fewer rows. Using workspace reduces mistakes and clarifies the circuit flow.</div>
+      </li>
+
+      <li class="q">
+        <div><strong>8.</strong> Given expression X = (A XOR B) XOR C, show whether X is true for inputs A=1,B=1,C=1 and explain parity interpretation.</div>
+        <textarea id="e8"></textarea>
+        <div class="answer" id="m8">Model solution:
+Compute A XOR B = 1 XOR 1 = 0. Then 0 XOR C = 0 XOR 1 = 1. So X = 1.
+Parity: XOR chain gives 1 when an odd number of inputs are 1 (odd parity). Here 3 ones → odd → output 1.</div>
+      </li>
+
+      <li class="q">
+        <div><strong>9.</strong> Simplify the expression: (A AND B) OR (A AND NOT B) — show algebraic steps.</div>
+        <textarea id="e9"></textarea>
+        <div class="answer" id="m9">Model solution:
+Factor A: = A AND (B OR NOT B)
+Since (B OR NOT B) = 1, expression = A AND 1 = A.
+So (A AND B) OR (A AND NOT B) simplifies to A.</div>
+      </li>
+
+      <li class="q">
+        <div><strong>10.</strong> Create a logic expression for: "System OK if sensor1 AND sensor2 are OK, OR if manual override is active (override bypasses sensors)." Identify when system is OK.</div>
+        <textarea id="e10"></textarea>
+        <div class="answer" id="m10">Model solution:
+Expression: OK = (Sensor1 AND Sensor2) OR Override.
+System OK when either both sensors report OK, or whenever Override=1 regardless of sensors. Truth table shows OK=1 for rows with Override=1, and when both sensors=1 and Override=0.</div>
+      </li>
+
+      <li class="q">
+        <div><strong>11.</strong> Convert the truth-table below to a minimized logic expression (assume variables A,B,C):
+Rows producing 1: (0,0,1), (0,1,1), (1,0,0)
+Provide the minimized expression if possible.</div>
+        <textarea id="e11"></textarea>
+        <div class="answer" id="m11">Model solution:
+From earlier (Part C Q3), X = (NOT A AND C) OR (A AND NOT B AND NOT C).
+This is already simplified by factoring common terms. Further algebraic simplification depends on K-map; final minimized expression is X = (NOT A AND C) OR (A AND NOT B AND NOT C).</div>
+      </li>
+
+      <li class="q">
+        <div><strong>12.</strong> Explain, with a short example, how you would test a student's circuit solution for correctness under exam conditions (systematic checklist).</div>
+        <textarea id="e12"></textarea>
+        <div class="answer" id="m12">Model solution:
+Checklist:
+1) Verify expression matches problem statement (conditions captured).
+2) Build truth table: compute for all input combinations.
+3) Check circuit: compute intermediate nodes for each row and final output.
+4) Compare truth table from expression, circuit and expected outputs.
+Example: For Lights = Dark AND (Motion OR Override), test rows where Dark=0 => Lights must be 0 regardless; test rows where Dark=1 and Motion or Override=1 => Lights=1.</div>
+      </li>
+
+      <li class="q">
+        <div><strong>13.</strong> Show how to implement XNOR (equivalence) using basic gates (AND, OR, NOT) and give the expression.</div>
+        <textarea id="e13"></textarea>
+        <div class="answer" id="m13">Model solution:
+XNOR outputs 1 when inputs equal. Expression: XNOR = (A AND B) OR (NOT A AND NOT B).
+Alternatively XNOR = NOT(A XOR B). Using AND, OR, NOT: (A AND B) OR ((NOT A) AND (NOT B)).</div>
+      </li>
+
+      <li class="q">
+        <div><strong>14.</strong> A logic circuit is given: X = NOT(A AND (B OR C)). Use De Morgan to rewrite it and identify a circuit using only NAND gates if possible (describe how).</div>
+        <textarea id="e14"></textarea>
+        <div class="answer" id="m14">Model solution:
+Rewrite: NOT(A AND (B OR C)) = (NOT A) OR (NOT (B OR C)) = (NOT A) OR ((NOT B) AND (NOT C)).
+Using NANDs: A AND (B OR C) can be built and then NAND used to invert. Alternatively use NAND form by applying De Morgan to transform OR into NAND combinations. Specific construction: construct B OR C via NAND: (NOT(B NAND B) NAND NOT(C NAND C)) etc. Practical approach: implement B OR C with NANDs and then NAND with A. (Exam marking expects De Morgan steps and reasoning how NANDs can implement inversion.)</div>
+      </li>
+
+      <li class="q">
+        <div><strong>15.</strong> Provide a short worked example (with workspace) converting the truth table:
+A B C → X
+0 0 1 → 1
+0 1 1 → 1
+1 0 0 → 1
+others → 0
+into a minimized circuit and explain each step.</div>
+        <textarea id="e15"></textarea>
+        <div class="answer" id="m15">Model solution:
+1) List minterms corresponding to 1s:
+m1: NOT A AND NOT B AND C
+m2: NOT A AND B AND C
+m3: A AND NOT B AND NOT C
+2) Factor first two: NOT A AND C AND (NOT B OR B) → NOT A AND C
+3) So expression: X = (NOT A AND C) OR (A AND NOT B AND NOT C)
+4) Implement circuit: one AND for NOT A & C, another 3-input AND for A & NOT B & NOT C, then OR the results.
+Workspace columns: NOT A, NOT B, NOT C, (NOT A AND C), (A AND NOT B AND NOT C), final OR → X.
+This is the minimized circuit (no further common factoring possible).</div>
+      </li>
+    </ol>
+
+    <div style="margin-top:12px;">
+      <button id="examReveal" class="btn">Reveal Model Answers</button>
+    </div>
+  </section>
+
+  <p style="margin-top:16px;"><a href="as-4-processor-fundamentals.html">&#8592; Back to Chapter 4 Notes</a> &nbsp; | &nbsp; <a href="index.html">&#8592; Back to Index</a></p>
+
+  <footer style="margin-top:18px; text-align:center;">
+    <p>© 2025 Ravi Raju - AS Level Computer Science</p>
+  </footer>
+
+  <script>
+    // MCQ answer key
+    const mcqKey = {
+      q1: 'B', q2: 'A', q3: 'B', q4: 'B', q5: 'B',
+      q6: 'C', q7: 'B', q8: 'C', q9: 'A', q10: 'A',
+      q11: 'A', q12: 'B', q13: 'A', q14: 'A', q15: 'A'
+    };
+
+    // Disable form controls helper
+    function disableMCQInputs() {
+      const inputs = document.querySelectorAll('#mcqForm input[type="radio"]');
+      inputs.forEach(i => i.disabled = true);
+    }
+
+    // Handle MCQ submission
+    document.getElementById('mcqSubmit').addEventListener('click', function() {
+      const btn = this;
+      if (btn.disabled) return;
+      let score = 0, total = Object.keys(mcqKey).length;
+      for (let i=1;i<=total;i++){
+        const name = 'q'+i;
+        const sel = document.querySelector('input[name="'+name+'"]:checked');
+        if (sel && sel.value === mcqKey[name]) score++;
+      }
+      const percent = Math.round((score/total)*100);
+      let comment = percent >= 80 ? 'Excellent — strong mastery.' :
+                    percent >= 60 ? 'Good — small gaps.' :
+                    percent >= 40 ? 'Satisfactory — revise key topics.' :
+                    'Weak — revisit the chapter thoroughly.';
+      document.getElementById('mcqResult').textContent = `MCQ score: ${score} / ${total} (${percent}%). ${comment}`;
+      // lock inputs and button
+      disableMCQInputs();
+      btn.disabled = true;
+    });
+
+    // Reveal Short Answers (reveal all s1..s15)
+    document.getElementById('shortReveal').addEventListener('click', function(){
+      const btn = this;
+      if (btn.disabled) return;
+      for (let i=1;i<=15;i++){
+        const el = document.getElementById('s'+i);
+        if (el) el.style.display = 'block';
+      }
+      btn.disabled = true;
+    });
+
+    // Reveal Exam Model Answers (reveal m1..m15)
+    document.getElementById('examReveal').addEventListener('click', function(){
+      const btn = this;
+      if (btn.disabled) return;
+      for (let i=1;i<=15;i++){
+        const el = document.getElementById('m'+i);
+        if (el) el.style.display = 'block';
+      }
+      btn.disabled = true;
+      // scroll to model answers (top)
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Accessibility: ensure answers hidden initially (they are), and no reset button is provided.
+  </script>
+</body>
+</html>

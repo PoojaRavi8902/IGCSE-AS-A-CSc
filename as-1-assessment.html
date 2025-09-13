@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AS Level Computer Science - Chapter 1 Assessment</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 18px; line-height: 1.6; color: #111; }
+    header, footer { text-align: center; margin: 18px 0; }
+    h1 { margin: 6px 0; }
+    h2 { color: #003366; margin: 6px 0 14px; }
+    .section { margin: 18px 0; padding: 12px; border: 1px solid #ddd; border-radius: 6px; background:#fbfbfb; }
+    .section h3 { margin-top:0; color:#00559a; }
+    .question { margin: 12px 0; padding: 8px; border-radius: 6px; }
+    .options label { display:block; margin:6px 0; cursor: pointer; }
+    .btn { background:#003366; color:#fff; border:none; padding:10px 18px; border-radius:6px; cursor:pointer; font-size:16px; }
+    .btn:hover { background:#0055aa; }
+    #mcqResult { font-weight:700; margin-top:10px; }
+    .answer { margin-top:8px; padding:10px; background:#fff; border-left:4px solid #0a7; display:none; }
+    .model { margin-top:8px; padding:10px; background:#fff; border-left:4px solid #36f; display:none; white-space:pre-wrap; }
+    textarea { width:100%; min-height:120px; padding:8px; font-family:inherit; font-size:14px; margin-top:8px; }
+    .note { font-size:0.95em; color:#444; margin-bottom:10px; }
+    a { color:#003366; }
+    .mcq-grid { display:block; }
+    @media(min-width:900px){ .mcq-grid{ display:grid; grid-template-columns:1fr 1fr; gap:12px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AS Level Computer Science (9618)</h1>
+    <h2>Chapter 1: Information Representation — Assessment</h2>
+    <p><em>Prepared by Ravi Raju</em></p>
+  </header>
+
+  <main>
+    <p class="note"><strong>Instructions:</strong> Complete all three sections. When you click <em>Submit</em> your MCQ score will be shown and the model answers for Short Questions and Exam-Style Questions will be revealed. There is <strong>no reset</strong> button so results and answers remain visible for grading and review.</p>
+
+    <!-- MCQ Section -->
+    <section class="section" id="mcqSection">
+      <h3>Section A — Multiple Choice Questions (15)</h3>
+      <p class="note">Select the best option for each question. The MCQs are automatically marked when you submit.</p>
+
+      <form id="mcqForm">
+        <div class="mcq-grid">
+          <!-- Q1 -->
+          <div class="question">
+            <p><strong>1.</strong> What is the base of the hexadecimal system?</p>
+            <div class="options">
+              <label><input type="radio" name="q1" value="a"> 8</label>
+              <label><input type="radio" name="q1" value="b"> 10</label>
+              <label><input type="radio" name="q1" value="c"> 2</label>
+              <label><input type="radio" name="q1" value="d"> 16</label>
+            </div>
+          </div>
+          <!-- Q2 -->
+          <div class="question">
+            <p><strong>2.</strong> A nibble is how many bits?</p>
+            <div class="options">
+              <label><input type="radio" name="q2" value="a"> 2</label>
+              <label><input type="radio" name="q2" value="b"> 4</label>
+              <label><input type="radio" name="q2" value="c"> 8</label>
+              <label><input type="radio" name="q2" value="d"> 16</label>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="question">
+            <p><strong>3.</strong> Which code is a standard 7-bit character code?</p>
+            <div class="options">
+              <label><input type="radio" name="q3" value="a"> ASCII</label>
+              <label><input type="radio" name="q3" value="b"> UTF-16</label>
+              <label><input type="radio" name="q3" value="c"> EBCDIC</label>
+              <label><input type="radio" name="q3" value="d"> BCD</label>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="question">
+            <p><strong>4.</strong> 24-bit colour means how many possible colours?</p>
+            <div class="options">
+              <label><input type="radio" name="q4" value="a"> 256</label>
+              <label><input type="radio" name="q4" value="b"> 65,536</label>
+              <label><input type="radio" name="q4" value="c"> 16,777,216</label>
+              <label><input type="radio" name="q4" value="d"> 1,024</label>
+            </div>
+          </div>
+
+          <!-- Q5 -->
+          <div class="question">
+            <p><strong>5.</strong> What is the sampling theorem (Nyquist) minimum requirement?</p>
+            <div class="options">
+              <label><input type="radio" name="q5" value="a"> Sample at half the highest frequency</label>
+              <label><input type="radio" name="q5" value="b"> Sample at least twice the highest frequency</label>
+              <label><input type="radio" name="q5" value="c"> Sample at same as highest frequency</label>
+              <label><input type="radio" name="q5" value="d"> Sample at four times the highest frequency</label>
+            </div>
+          </div>
+
+          <!-- Q6 -->
+          <div class="question">
+            <p><strong>6.</strong> Which of the following is a lossless compression?</p>
+            <div class="options">
+              <label><input type="radio" name="q6" value="a"> JPEG</label>
+              <label><input type="radio" name="q6" value="b"> MP3</label>
+              <label><input type="radio" name="q6" value="c"> Run-Length Encoding</label>
+              <label><input type="radio" name="q6" value="d"> MPEG</label>
+            </div>
+          </div>
+
+          <!-- Q7 -->
+          <div class="question">
+            <p><strong>7.</strong> In two's complement with 8 bits, what is the range of signed integers?</p>
+            <div class="options">
+              <label><input type="radio" name="q7" value="a"> 0 to 255</label>
+              <label><input type="radio" name="q7" value="b"> -128 to 127</label>
+              <label><input type="radio" name="q7" value="c"> -255 to 255</label>
+              <label><input type="radio" name="q7" value="d"> -127 to 128</label>
+            </div>
+          </div>
+
+          <!-- Q8 -->
+          <div class="question">
+            <p><strong>8.</strong> Which of these is the correct hex for binary 1111 1111?</p>
+            <div class="options">
+              <label><input type="radio" name="q8" value="a"> 00</label>
+              <label><input type="radio" name="q8" value="b"> FF</label>
+              <label><input type="radio" name="q8" value="c"> F0</label>
+              <label><input type="radio" name="q8" value="d"> 0F</label>
+            </div>
+          </div>
+
+          <!-- Q9 -->
+          <div class="question">
+            <p><strong>9.</strong> BCD stores each decimal digit in how many bits?</p>
+            <div class="options">
+              <label><input type="radio" name="q9" value="a"> 2</label>
+              <label><input type="radio" name="q9" value="b"> 3</label>
+              <label><input type="radio" name="q9" value="c"> 4</label>
+              <label><input type="radio" name="q9" value="d"> 8</label>
+            </div>
+          </div>
+
+          <!-- Q10 -->
+          <div class="question">
+            <p><strong>10.</strong> Which Unicode encoding is byte-compatible with ASCII for the 7-bit range?</p>
+            <div class="options">
+              <label><input type="radio" name="q10" value="a"> UTF-8</label>
+              <label><input type="radio" name="q10" value="b"> UTF-16</label>
+              <label><input type="radio" name="q10" value="c"> UTF-32</label>
+              <label><input type="radio" name="q10" value="d"> Latin-1</label>
+            </div>
+          </div>
+
+          <!-- Q11 -->
+          <div class="question">
+            <p><strong>11.</strong> If a bitmap is 1366×768 with 24-bit colour, roughly how many bytes of pixel data?</p>
+            <div class="options">
+              <label><input type="radio" name="q11" value="a"> ~3 million bytes</label>
+              <label><input type="radio" name="q11" value="b"> ~300 KB</label>
+              <label><input type="radio" name="q11" value="c"> ~30 MB</label>
+              <label><input type="radio" name="q11" value="d"> ~300 MB</label>
+            </div>
+          </div>
+
+          <!-- Q12 -->
+          <div class="question">
+            <p><strong>12.</strong> What is the main advantage of vector graphics over bitmaps?</p>
+            <div class="options">
+              <label><input type="radio" name="q12" value="a"> Smaller file for photos</label>
+              <label><input type="radio" name="q12" value="b"> No need for colour depth</label>
+              <label><input type="radio" name="q12" value="c"> Scales without loss of quality</label>
+              <label><input type="radio" name="q12" value="d"> Faster sampling for audio</label>
+            </div>
+          </div>
+
+          <!-- Q13 -->
+          <div class="question">
+            <p><strong>13.</strong> When adding BCD digits, what correction might be needed if a nibble > 9?</p>
+            <div class="options">
+              <label><input type="radio" name="q13" value="a"> Add 0011</label>
+              <label><input type="radio" name="q13" value="b"> Add 0110</label>
+              <label><input type="radio" name="q13" value="c"> Subtract 0110</label>
+              <label><input type="radio" name="q13" value="d"> Add 1001</label>
+            </div>
+          </div>
+
+          <!-- Q14 -->
+          <div class="question">
+            <p><strong>14.</strong> Huffman coding assigns:</p>
+            <div class="options">
+              <label><input type="radio" name="q14" value="a"> fixed-length codes for all symbols</label>
+              <label><input type="radio" name="q14" value="b"> longer codes to frequent symbols</label>
+              <label><input type="radio" name="q14" value="c"> shorter codes to frequent symbols</label>
+              <label><input type="radio" name="q14" value="d"> only 8-bit codes</label>
+            </div>
+          </div>
+
+          <!-- Q15 -->
+          <div class="question">
+            <p><strong>15.</strong> Two's complement representation of negative numbers has which advantage?</p>
+            <div class="options">
+              <label><input type="radio" name="q15" value="a"> Zero has two representations</label>
+              <label><input type="radio" name="q15" value="b"> Simplifies addition and subtraction</label>
+              <label><input type="radio" name="q15" value="c"> Uses sign bit only</label>
+              <label><input type="radio" name="q15" value="d"> Prevents overflow entirely</label>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:12px;">
+          <button type="button" class="btn" id="submitAll">Submit</button>
+          <div id="mcqResult" aria-live="polite"></div>
+        </div>
+      </form>
+    </section>
+
+    <!-- Short Questions -->
+    <section class="section" id="shortSection">
+      <h3>Section B — Short Questions (15)</h3>
+      <p class="note">Write short answers. When you click <em>Submit</em>, model answers will appear below each question for self-checking.</p>
+
+      <ol>
+        <li class="question">
+          <p><strong>1.</strong> Explain why computers use binary rather than denary internally.</p>
+          <div class="answer" id="s1"><strong>Answer:</strong> Computers use binary because hardware components (switches, transistors) reliably represent two states (on/off). Binary simplifies circuit design and error detection and maps directly to physical states.</div>
+        </li>
+
+        <li class="question">
+          <p><strong>2.</strong> Convert binary 101101 to denary.</p>
+          <div class="answer" id="s2"><strong>Answer:</strong> 1×32 +0×16 +1×8 +1×4 +0×2 +1×1 = 32+8+4+1 = 45.</div>
+        </li>
+
+        <li class="question">
+          <p><strong>3.</strong> Give the hexadecimal representation of binary 11110000.</p>
+          <div class="answer" id="s3"><strong>Answer:</strong> 1111 0000₂ = F0₁₆.</div>
+        </li>
+
+        <li class="question">
+          <p><strong>4.</strong> What is a byte and how many possible values can it hold?</p>
+          <div class="answer" id="s4"><strong>Answer:</strong> A byte is 8 bits and can represent 2⁸ = 256 distinct values (0–255 unsigned).</div>
+        </li>
+
+        <li class="question">
+          <p><strong>5.</strong> State Nyquist theorem in one sentence.</p>
+          <div class="answer" id="s5"><strong>Answer:</strong> To reconstruct a signal without aliasing, sample at at least twice the highest frequency present in the signal.</div>
+        </li>
+
+        <li class="question">
+          <p><strong>6.</strong> What is colour depth (bit depth)?</p>
+          <div class="answer" id="s6"><strong>Answer:</strong> Colour depth is the number of bits used per pixel (or per primary channel), determining how many colours each pixel can represent.</div>
+        </li>
+
+        <li class="question">
+          <p><strong>7.</strong> Give one advantage of vector graphics.</p>
+          <div class="answer" id="s7"><strong>Answer:</strong> Vector images scale without loss of quality because objects are stored as geometric descriptions rather than pixels.</div>
+        </li>
+
+        <li class="question">
+          <p><strong>8.</strong> What is run-length encoding (RLE)?</p>
+          <div class="answer" id="s8"><strong>Answer:</strong> RLE replaces consecutive repeated values with a pair indicating the value and the count, effective where long runs occur.</div>
+        </li>
+
+        <li class="question">
+          <p><strong>9.</strong> How are Unicode code points shown in documentation?</p>
+          <div class="answer" id="s9"><strong>Answer:</strong> As U+ followed by a hexadecimal number, e.g., U+0041 for 'A'.</div>
+        </li>
+
+        <li class="question">
+          <p><strong>10.</strong> Why might BCD be used for currency values?</p>
+          <div class="answer" id="s10"><strong>Answer:</strong> BCD stores each decimal digit separately, avoiding rounding errors that arise when using binary floating-point for fixed decimal currency amounts.</div>
+        </li>
+
+        <li class="question">
+          <p><strong>11.</strong> Explain the difference between colour depth and bit depth (as used per channel).</p>
+          <div class="answer" id="s11"><strong>Answer:</strong> Colour depth often means total bits per pixel (e.g., 24-bit). Bit depth per channel is bits used for each colour channel (e.g., 8 bits per R, G, B).</div>
+        </li>
+
+        <li class="question">
+          <p><strong>12.</strong> What is a memory dump and why is hex used?</p>
+          <div class="answer" id="s12"><strong>Answer:</strong> A memory dump shows raw bytes in memory; hex is compact and maps neatly to bytes (2 hex digits per byte), making it easier to read than binary.</div>
+        </li>
+
+        <li class="question">
+          <p><strong>13.</strong> How many distinct codes does 7-bit ASCII provide?</p>
+          <div class="answer" id="s13"><strong>Answer:</strong> 2⁷ = 128 codes (0–127).</div>
+        </li>
+
+        <li class="question">
+          <p><strong>14.</strong> Briefly explain two's complement conversion trick (flip bits after first 1).</p>
+          <div class="answer" id="s14"><strong>Answer:</strong> To find two's complement: from LSB move left past any zeros up to the first 1 (leave it), then flip all remaining higher bits; this yields the negative representation.</div>
+        </li>
+
+        <li class="question">
+          <p><strong>15.</strong> What effect does increasing sampling resolution (bits per sample) have on audio?</p>
+          <div class="answer" id="s15"><strong>Answer:</strong> Higher resolution reduces quantization error and increases dynamic range (better fidelity), but increases file size.</div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Exam Style Questions -->
+    <section class="section" id="examSection">
+      <h3>Section C — Exam-Style Questions (15)</h3>
+      <p class="note">Attempt these as full answers. Use the textareas to type your responses. When you click <em>Submit</em>, model answers will be revealed beneath each question for guidance and grading.</p>
+
+      <ol>
+        <li class="question">
+          <p><strong>1.</strong> Explain place value in the denary system with an example (use 346).</p>
+          <textarea id="e1" placeholder="Type your answer here..."></textarea>
+          <div class="model" id="m1"><strong>Model answer:</strong>
+Place value assigns a power of 10 to each digit position. For 346: 3×10² = 300, 4×10¹ = 40, 6×10⁰ = 6. The total value is 300 + 40 + 6 = 346. The rightmost digit is least significant; place values increase to the left.</div>
+        </li>
+
+        <li class="question">
+          <p><strong>2.</strong> Convert the denary number 78 to binary and show steps.</p>
+          <textarea id="e2" placeholder="Type your answer here..."></textarea>
+          <div class="model" id="m2"><strong>Model answer:</strong>
+Largest power of 2 ≤ 78 is 64 (2⁶) → 1 at 2⁶ place. Remainder 14. Next power 8 (2³) → 1 at 2³. Remainder 6 → 1 at 2² (4), remainder 2 → 1 at 2¹, remainder 0. Binary: 1001110₂.</div>
+        </li>
+
+        <li class="question">
+          <p><strong>3.</strong> Describe how two's complement represents negative numbers and convert -79 to 8-bit two's complement.</p>
+          <textarea id="e3" placeholder="Type your answer here..."></textarea>
+          <div class="model" id="m3"><strong>Model answer:</strong>
+Two's complement: invert all bits of magnitude and add 1. For +79: 01001111. Invert: 10110000. Add 1 → 10110001. So -79 is 10110001 (8-bit).</div>
+        </li>
+
+        <li class="question">
+          <p><strong>4.</strong> Explain why UTF-8 is backward compatible with ASCII and outline the byte patterns used.</p>
+          <textarea id="e4" placeholder="Type your answer here..."></textarea>
+          <div class="model" id="m4"><strong>Model answer:</strong>
+UTF-8 encodes ASCII characters (U+0000 to U+007F) as single bytes with MSB 0, identical to 7-bit ASCII. Multi-byte sequences start with leading bits 110,1110,11110 and continuation bytes have 10xxxxxx, ensuring no ambiguity and backward compatibility.</div>
+        </li>
+
+        <li class="question">
+          <p><strong>5.</strong> Calculate the approximate file size (in bytes and MiB) of a 1366×768 image at 24-bit colour (show calculation).</p>
+          <textarea id="e5" placeholder="Type your answer here..."></textarea>
+          <div class="model" id="m5"><strong>Model answer:</strong>
+Bits = 1366×768×24 = 25,178,112 bits. Bytes = ÷8 = 3,147,264 bytes. In MiB ≈ 3,147,264/1024/1024 ≈ 3.00 MiB (≈3 MiB).</div>
+        </li>
+
+        <li class="question">
+          <p><strong>6.</strong> Describe run-length encoding and give a short example of compressing 'AAAAABBBCC'.</p>
+          <textarea id="e6" placeholder="Type your answer here..."></textarea>
+          <div class="model" id="m6"><strong>Model answer:</strong>
+RLE replaces runs with (count, value). 'AAAAABBBCC' → (5,A)(3,B)(2,C). Depending on scheme bytes could be: 05 A 03 B 02 C; reduces repeated sequences.</div>
+        </li>
+
+        <li class="question">
+          <p><strong>7.</strong> Explain the difference between lossy and lossless compression and give one example of each and why each is suitable.</p>
+          <textarea id="e7" placeholder="Type your answer here..."></textarea>
+          <div class="model" id="m7"><strong>Model answer:</strong>
+Lossless: original recovered exactly (e.g., PNG, ZIP) — used for text/data. Lossy: some information discarded to reduce size (e.g., JPEG, MP3) — used where human perception tolerates small differences like photos/audio.</div>
+        </li>
+
+        <li class="question">
+          <p><strong>8.</strong> Explain how quantization error arises in ADC and how increasing resolution affects it.</p>
+          <textarea id="e8" placeholder="Type your answer here..."></textarea>
+          <div class="model" id="m8"><strong>Model answer:</strong>
+Quantization error is the difference between the true analogue amplitude and the nearest discrete level chosen. Increasing bit resolution gives more levels, reducing quantization error and improving fidelity, at cost of larger data size.</div>
+        </li>
+
+        <li class="question">
+          <p><strong>9.</strong> Show binary addition of 0110 and 1011 and state if overflow occurs for 4-bit storage (unsigned).</p>
+          <textarea id="e9" placeholder="Type your answer here..."></textarea>
+          <div class="model" id="m9"><strong>Model answer:</strong>
+0110 (6) + 1011 (11) = 10001 (17). Stored in 4 bits would be 0001 with a carry/overflow. For 4-bit unsigned overflow occurs because 17 > 15.</div>
+        </li>
+
+        <li class="question">
+          <p><strong>10.</strong> Describe how BCD addition is corrected when a nibble exceeds 9 (briefly demonstrate).</p>
+          <textarea id="e10" placeholder="Type your answer here..."></textarea>
+          <div class="model" id="m10"><strong>Model answer:</strong>
+When a nibble > 9, add correction 0110 (decimal 6) to that nibble; carry out any carry to next nibble. This converts invalid BCD results to valid decimal digits with correct carries.</div>
+        </li>
+
+        <li class="question">
+          <p><strong>11.</strong> What are the benefits and limitations of using UTF-8 vs fixed-width encodings for international text?</p>
+          <textarea id="e11" placeholder="Type your answer here..."></textarea>
+          <div class="model" id="m11"><strong>Model answer:</strong>
+UTF-8 benefits: backward compatible with ASCII, space-efficient for ASCII text, supports whole Unicode. Limitations: variable byte length complicates indexing. Fixed-width (UTF-32) simplifies indexing but wastes space for common texts and increases memory use.</div>
+        </li>
+
+        <li class="question">
+          <p><strong>12.</strong> Explain why computer scientists introduced binary prefixes (Ki, Mi, Gi) and show conversion of 4 GiB to MiB.</p>
+          <textarea id="e12" placeholder="Type your answer here..."></textarea>
+          <div class="model" id="m12"><strong>Model answer:</strong>
+Binary prefixes clarify 2ⁿ-based sizes: 1 Ki = 2¹⁰. 4 GiB (assuming Gi = 2³⁰) = 4 × 1024 MiB = 4096 MiB. They avoid ambiguity between 10³ and 2¹⁰ multipliers.</div>
+        </li>
+
+        <li class="question">
+          <p><strong>13.</strong> Give a short explanation of why a bitmap image may show banding if bit depth is too low.</p>
+          <textarea id="e13" placeholder="Type your answer here..."></textarea>
+          <div class="model" id="m13"><strong>Model answer:</strong>
+Low bit depth reduces number of colours/levels, causing large steps between adjacent colours so gradual gradients become visible as bands rather than smooth transitions.</div>
+        </li>
+
+        <li class="question">
+          <p><strong>14.</strong> Outline the process of converting a hex value 2A6 to decimal (brief calculation).</p>
+          <textarea id="e14" placeholder="Type your answer here..."></textarea>
+          <div class="model" id="m14"><strong>Model answer:</strong>
+2×16² + A(10)×16 + 6 = 2×256 + 10×16 + 6 = 512 + 160 + 6 = 678.</div>
+        </li>
+
+        <li class="question">
+          <p><strong>15.</strong> Describe how Huffman coding ensures no code is a prefix of another (prefix property) and why that matters.</p>
+          <textarea id="e15" placeholder="Type your answer here..."></textarea>
+          <div class="model" id="m15"><strong>Model answer:</strong>
+Huffman builds a prefix-free binary tree so each symbol is a leaf: no code is the prefix of another. This ensures unique decodability: the bit stream can be parsed unambiguously from left to right.</div>
+        </li>
+      </ol>
+    </section>
+
+    <p style="margin-top:14px;"><a href="as-1-information-representation.html">⬅ Back to Chapter 1 Notes</a></p>
+  </main>
+
+  <footer>
+    <p>© 2025 Ravi Raju - AS Level Computer Science</p>
+  </footer>
+
+  <script>
+    // Answers for MCQs (keys correspond to q1..q15)
+    const mcqAnswers = {
+      q1: 'd', q2: 'b', q3: 'a', q4: 'c', q5: 'b',
+      q6: 'c', q7: 'b', q8: 'b', q9: 'c', q10: 'a',
+      q11: 'a', q12: 'c', q13: 'b', q14: 'c', q15: 'b'
+    };
+
+    // Hook submit button
+    document.getElementById('submitAll').addEventListener('click', handleSubmit);
+
+    // Prevent multiple reveals? We'll simply disable the button after submit to keep results visible.
+    function handleSubmit() {
+      // MCQ scoring
+      let score = 0, total = 15;
+      for (let i = 1; i <= total; i++) {
+        const name = 'q' + i;
+        const sel = document.querySelector(`input[name="${name}"]:checked`);
+        if (sel && sel.value === mcqAnswers[name]) score++;
+      }
+      const mcqResult = document.getElementById('mcqResult');
+      mcqResult.textContent = `MCQ Score: ${score} / ${total}`;
+
+      // Reveal all short question answers
+      for (let i = 1; i <= 15; i++) {
+        const sid = 's' + i;
+        const el = document.getElementById(sid);
+        if (el) el.style.display = 'block';
+      }
+
+      // Reveal all exam-style model answers
+      for (let i = 1; i <= 15; i++) {
+        const mid = 'm' + i;
+        const el = document.getElementById(mid);
+        if (el) el.style.display = 'block';
+      }
+
+      // Disable submit button so students can't accidentally re-submit to overwrite (no reset)
+      const btn = document.getElementById('submitAll');
+      btn.disabled = true;
+      btn.style.opacity = 0.6;
+      btn.style.cursor = 'default';
+
+      // Expand result for teacher: show percentage and a brief comment
+      const percent = Math.round((score / total) * 100);
+      const comment = percent >= 80 ? 'Excellent — strong understanding.' :
+                      percent >= 60 ? 'Good — revise a few topics.' :
+                      percent >= 40 ? 'Satisfactory — more practice needed.' :
+                      'Needs improvement — revisit the chapter and practice more.';
+      const extra = document.createElement('div');
+      extra.style.marginTop = '8px';
+      extra.textContent = ` (${percent}%) ${comment}`;
+      mcqResult.appendChild(extra);
+    }
+
+    // Note: No reset button per instruction. Answers remain visible after submit.
+  </script>
+</body>
+</html>

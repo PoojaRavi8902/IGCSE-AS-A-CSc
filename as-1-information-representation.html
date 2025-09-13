@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AS Level Computer Science - Chapter 1</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+    nav ul { list-style: none; padding: 0; }
+    nav ul li { display: inline; margin-right: 15px; }
+    header, footer { text-align: center; margin: 20px 0; }
+    section { margin-top: 30px; }
+    h3 { color: #003366; border-bottom: 2px solid #003366; padding-bottom: 5px; }
+    h4 { color: #004080; }
+    .example, .discussion, .question { background: #f9f9f9; padding: 10px; margin: 15px 0; border-left: 4px solid #003366; }
+    .discussion { border-left-color: #800000; }
+    .question { border-left-color: #006600; font-weight: bold; }
+    table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+    table, th, td { border: 1px solid #666; }
+    th, td { padding: 8px; text-align: center; }
+    .diagram { font-style: italic; color: #555; margin: 10px 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AS Level Computer Science (9618)</h1>
+    <h2>Chapter 1: Information Representation</h2>
+    <p><em>Prepared by Ravi Raju</em></p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="as-1-information-representation.html">1</a></li>
+      <li><a href="as-2-communication.html">2</a></li>
+      <li><a href="as-3-hardware.html">3</a></li>
+      <li><a href="as-4-processor-fundamentals.html">4</a></li>
+      <li><a href="as-5-system-software.html">5</a></li>
+      <li><a href="as-6-security-privacy-integrity.html">6</a></li>
+      <li><a href="as-7-ethics-ownership.html">7</a></li>
+      <li><a href="as-8-databases.html">8</a></li>
+      <li><a href="as-9-algorithm-design.html">9</a></li>
+      <li><a href="as-10-data-types-structures.html">10</a></li>
+      <li><a href="as-11-programming.html">11</a></li>
+      <li><a href="as-12-software-development.html">12</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h3>1.01 Number Systems</h3>
+      <h4>Denary Numbers</h4>
+      <p>Denary (decimal) numbers use base-10 with digits 0–9. Place values increase in powers of 10.</p>
+      <table>
+        <tr><th>Place value</th><th>10² = 100</th><th>10¹ = 10</th><th>10⁰ = 1</th></tr>
+        <tr><th>Digit</th><td>3</td><td>4</td><td>6</td></tr>
+        <tr><th>Product</th><td>300</td><td>40</td><td>6</td></tr>
+      </table>
+
+      <h4>Binary Numbers</h4>
+      <p>Binary is base-2 with digits 0 and 1. A binary digit is called a <strong>bit</strong>.</p>
+      <table>
+        <tr><th>Place value</th><th>2⁵=32</th><th>2⁴=16</th><th>2³=8</th><th>2²=4</th><th>2¹=2</th><th>2⁰=1</th></tr>
+        <tr><th>Digit</th><td>1</td><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td></tr>
+        <tr><th>Product</th><td>32</td><td>0</td><td>8</td><td>4</td><td>2</td><td>0</td></tr>
+      </table>
+      <p><em>101110₂ = 46₁₀</em></p>
+
+      <h4>Hexadecimal Numbers</h4>
+      <p>Hexadecimal is base-16 with digits 0–9 and A–F. Each nibble (4 bits) maps to one hex digit.</p>
+      <table>
+        <tr><th>Place value</th><th>16²=256</th><th>16¹=16</th><th>16⁰=1</th></tr>
+        <tr><th>Digit</th><td>2</td><td>A (10)</td><td>6</td></tr>
+        <tr><th>Product</th><td>512</td><td>160</td><td>6</td></tr>
+      </table>
+      <p><em>2A6₁₆ = 678₁₀</em></p>
+
+      <div class="example"><strong>Example:</strong> Binary 00001010 = Hex 0A = Decimal 10.</div>
+
+      <div class="question">Question 1.01: Does a computer ever use hexadecimal numbers?</div>
+    </section>
+
+    <section>
+      <h3>1.02 Numbers and Quantities</h3>
+      <p>Numbers can be integers, signed integers, fractions, real numbers, or exponential notation.</p>
+      <table>
+        <tr><th>Type</th><th>Examples</th><th>Comments</th></tr>
+        <tr><td>Integer</td><td>3, 47</td><td>Whole numbers</td></tr>
+        <tr><td>Signed Integer</td><td>-3, +47</td><td>Includes sign</td></tr>
+        <tr><td>Fraction</td><td>2/3</td><td>Rare in CS</td></tr>
+        <tr><td>Real Number</td><td>-37.85</td><td>Whole + fractional part</td></tr>
+        <tr><td>Exponential</td><td>4.2×10⁻⁹</td><td>Large/small values</td></tr>
+      </table>
+      <h4>Prefixes</h4>
+      <p>Decimal prefixes (kilo, mega, giga, tera) vs binary prefixes (kibi, mebi, gibi, tebi).</p>
+      <table>
+        <tr><th>Prefix</th><th>Symbol</th><th>Value</th></tr>
+        <tr><td>kilo</td><td>k</td><td>10³</td></tr>
+        <tr><td>mega</td><td>M</td><td>10⁶</td></tr>
+        <tr><td>giga</td><td>G</td><td>10⁹</td></tr>
+        <tr><td>tera</td><td>T</td><td>10¹²</td></tr>
+      </table>
+      <table>
+        <tr><th>Binary Prefix</th><th>Symbol</th><th>Value</th></tr>
+        <tr><td>kibi</td><td>Ki</td><td>2¹⁰ = 1024</td></tr>
+        <tr><td>mebi</td><td>Mi</td><td>2²⁰</td></tr>
+        <tr><td>gibi</td><td>Gi</td><td>2³⁰</td></tr>
+        <tr><td>tebi</td><td>Ti</td><td>2⁴⁰</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h3>1.03 Internal Coding of Numbers</h3>
+      <p>Coding integers: unsigned, sign &amp; magnitude, two’s complement.</p>
+      <div class="example"><strong>Worked Example 1.03:</strong> Converting two’s complement 10110001₂ to decimal.</div>
+      <div class="discussion"><strong>Discussion Point:</strong> What is the two’s complement of 1000₂?</div>
+    </section>
+
+    <section>
+      <h3>1.04 Internal Coding of Text</h3>
+      <p>Character codes: ASCII (7-bit, extended 8-bit) and Unicode (UTF-8).</p>
+      <div class="question">Question 1.02: Many years ago, a byte was 6 bits. Which characters could be represented?</div>
+    </section>
+
+    <section>
+      <h3>1.05 Images</h3>
+      <p>Vector graphics (scalable, object-based) vs bitmap graphics (pixels, resolution, colour depth).</p>
+      <div class="diagram">[Diagram: Pixel grid vs Vector shapes]</div>
+    </section>
+
+    <section>
+      <h3>1.06 Sound</h3>
+      <p>Analogue to digital conversion (ADC): Sampling rate + resolution.</p>
+      <div class="diagram">[Diagram: Sound wave with sample points]</div>
+    </section>
+
+    <section>
+      <h3>1.07 Compression</h3>
+      <p>Lossless (Run-length encoding, Huffman coding) vs Lossy (JPEG, MP3).</p>
+      <div class="example"><strong>Example:</strong> Huffman coding for text with prefix property.</div>
+    </section>
+
+    <section>
+      <p><a href="as-1-assessment.html">👉 Go to Chapter 1 Assessment</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Ravi Raju - AS Level Computer Science</p>
+  </footer>
+</body>
+</html>

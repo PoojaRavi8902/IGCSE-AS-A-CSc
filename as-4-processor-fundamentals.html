@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AS Level Computer Science - Chapter 4: Processor Fundamentals</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 18px; line-height: 1.6; color: #111; background:#fafafa; }
+    header, footer { text-align: center; margin: 18px 0; }
+    h1 { margin: 6px 0; }
+    h2 { color: #003366; margin: 6px 0 14px; border-bottom:2px solid #ccc; padding-bottom:4px;}
+    h3 { color:#00559a; margin-top:18px;}
+    .section { margin: 18px 0; padding: 12px; border: 1px solid #ddd; border-radius: 6px; background:#fff; }
+    .example, .discussion, .examtip {
+      padding: 10px; margin: 10px 0; border-radius: 6px; }
+    .example { background:#e8f2ff; border-left:5px solid #3399ff; }
+    .discussion { background:#e6ffe6; border-left:5px solid #33cc33; }
+    .examtip { background:#fff3e0; border-left:5px solid #ff9900; }
+    .diagram { background:#f9f9f9; border:1px dashed #aaa; padding:10px; margin:10px 0; text-align:center; font-style:italic; }
+    table { width:100%; border-collapse: collapse; margin: 12px 0;}
+    th, td { border:1px solid #ccc; padding:8px; text-align:center;}
+    th { background:#003366; color:#fff;}
+    .question { margin-top:8px; font-weight:bold; }
+    a { color:#003366; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AS Level Computer Science (9618)</h1>
+    <h2>Chapter 4: Processor Fundamentals</h2>
+    <p><em>Prepared by Ravi Raju</em></p>
+  </header>
+
+  <main>
+    <p>This chapter focuses on Boolean logic, operators, truth tables, and logic circuits. These concepts are the foundation for how processors make decisions and how digital systems are designed.</p>
+
+    <!-- 4.01 -->
+    <section class="section">
+      <h3>4.01 Boolean Logic and Problem Statements</h3>
+      <p>A <strong>Boolean proposition (logic assertion)</strong> is a statement that can only be <strong>TRUE</strong> or <strong>FALSE</strong>.</p>
+
+      <p>Examples:</p>
+      <ul>
+        <li>“Colombo is further north than Singapore.” → TRUE</li>
+        <li>“It is raining.” → TRUE or FALSE</li>
+        <li>“The temperature is above 25°C.” → TRUE or FALSE</li>
+      </ul>
+
+      <p>Everyday conditions can be converted into Boolean statements, which can then be combined into <strong>problem statements</strong>. For example:</p>
+      <ul>
+        <li>“Take an umbrella IF it is raining OR rain is forecast.”</li>
+        <li>“Air conditioning turns on IF office hours AND temperature > 25°C.”</li>
+      </ul>
+
+      <div class="examtip"><strong>Exam Tip:</strong> In exams, carefully underline each individual condition in a worded statement before writing the logic expression.</div>
+    </section>
+
+    <!-- 4.02 -->
+    <section class="section">
+      <h3>4.02 Boolean Operators</h3>
+      <p>The three basic Boolean operators are:</p>
+      <ul>
+        <li><strong>AND:</strong> TRUE only if both inputs are TRUE.</li>
+        <li><strong>OR:</strong> TRUE if at least one input is TRUE.</li>
+        <li><strong>NOT:</strong> TRUE if the input is FALSE (inverts value).</li>
+      </ul>
+
+      <p>Additional operators you must know:</p>
+      <ul>
+        <li><strong>NAND:</strong> TRUE unless both inputs are TRUE.</li>
+        <li><strong>NOR:</strong> TRUE only if both inputs are FALSE.</li>
+        <li><strong>XOR:</strong> TRUE if exactly one input is TRUE (but not both).</li>
+      </ul>
+
+      <table>
+        <tr><th>Operator</th><th>Expression</th><th>Description</th></tr>
+        <tr><td>AND</td><td>A AND B</td><td>TRUE only if A and B are TRUE</td></tr>
+        <tr><td>OR</td><td>A OR B</td><td>TRUE if A or B or both are TRUE</td></tr>
+        <tr><td>NOT</td><td>NOT A</td><td>TRUE if A is FALSE</td></tr>
+        <tr><td>NAND</td><td>NOT (A AND B)</td><td>TRUE unless both A and B are TRUE</td></tr>
+        <tr><td>NOR</td><td>NOT (A OR B)</td><td>TRUE only if A and B are FALSE</td></tr>
+        <tr><td>XOR</td><td>A XOR B</td><td>TRUE if A or B is TRUE, but not both</td></tr>
+      </table>
+
+      <div class="example">
+        <strong>Worked Example 4.01:</strong><br>
+        Problem: A shopkeeper orders goods if it’s the end of the month, OR stock reaches reorder level, OR a regular customer places a large order.<br><br>
+        Expression: <code>X = A OR B OR (C AND D)</code><br>
+        where A = End_of_month, B = Reorder_level, C = Regular_customer, D = Large_order.
+      </div>
+    </section>
+
+    <!-- 4.03 -->
+    <section class="section">
+      <h3>4.03 Truth Tables</h3>
+      <p>A <strong>truth table</strong> lists all possible input combinations and the resulting output. TRUE is represented as 1, FALSE as 0.</p>
+
+      <h4>Truth tables for individual operators</h4>
+      <table>
+        <tr><th>A</th><th>B</th><th>A AND B</th><th>A OR B</th><th>A XOR B</th></tr>
+        <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+        <tr><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td></tr>
+        <tr><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td></tr>
+        <tr><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td></tr>
+      </table>
+
+      <p>NOT only has one input:</p>
+      <table>
+        <tr><th>A</th><th>NOT A</th></tr>
+        <tr><td>0</td><td>1</td></tr>
+        <tr><td>1</td><td>0</td></tr>
+      </table>
+
+      <div class="examtip"><strong>Exam Tip:</strong> Always include all input combinations (2ⁿ rows for n inputs) when building a truth table.</div>
+    </section>
+
+    <!-- 4.04 -->
+    <section class="section">
+      <h3>4.04 Logic Circuits and Logic Gates</h3>
+      <p>Boolean expressions can be represented by <strong>logic circuits</strong>. Each gate performs an operation:</p>
+      <ul>
+        <li>AND gate</li>
+        <li>OR gate</li>
+        <li>NOT gate</li>
+        <li>NAND gate</li>
+        <li>NOR gate</li>
+        <li>XOR gate</li>
+      </ul>
+
+      <div class="diagram">[Diagram Placeholder: Symbols and Truth Tables for all 6 gates]</div>
+
+      <p>Inputs are shown on the left of the gate symbol; output is on the right.</p>
+
+      <div class="example">
+        <strong>Worked Example 4.02:</strong><br>
+        Problem: A bank offers a special loan if (A) customer has ≥ 2 years with the bank, AND at least 2 of the following: (B) married, (C) aged ≥ 25, (D) parents are customers.<br><br>
+        Step 1: Write conditions: A, B, C, D.<br>
+        Step 2: Convert into logic expression.<br>
+        Step 3: Build truth table including intermediate columns (workspace).<br>
+        Step 4: Draw logic circuit.<br>
+      </div>
+
+      <div class="examtip"><strong>Exam Tip:</strong> In long circuits, break them into smaller intermediate outputs (M, N, P, Q) and fill the truth table step by step.</div>
+
+      <div class="discussion"><strong>Extension Question 4.01:</strong> Could the same outcome be produced by placing a NOT gate before an AND gate?</div>
+    </section>
+
+    <p style="margin-top:14px;"><a href="as-4-assessment.html">➡ Go to Chapter 4 Assessment</a></p>
+    <p style="margin-top:8px;"><a href="index.html">⬅ Back to Index</a></p>
+  </main>
+
+  <footer>
+    <p>© 2025 Ravi Raju - AS Level Computer Science</p>
+  </footer>
+</body>
+</html>

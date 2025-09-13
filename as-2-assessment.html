@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>AS Level Computer Science - Chapter 2 Assessment</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    :root{
+      --accent:#007a78;
+      --accent-dark:#005a57;
+      --muted:#f4fffe;
+      --panel:#ffffff;
+    }
+    body { font-family: Arial, Helvetica, sans-serif; margin:18px; background:#fbfdfc; color:#111; line-height:1.5; }
+    header { text-align:center; margin-bottom:14px; }
+    h1 { color:var(--accent-dark); margin:6px 0; }
+    .credit { font-style:italic; color:#333; margin-bottom:12px; }
+    .section { background:var(--panel); border:1px solid rgba(0,0,0,0.06); border-left:6px solid var(--accent); padding:14px; border-radius:8px; margin-bottom:18px;}
+    h2 { color:var(--accent); margin:0 0 8px; }
+    ol { padding-left:18px; }
+    .mcq-options label { display:block; margin:6px 0; cursor:pointer; }
+    .btn { display:inline-block; background:var(--accent); color:#fff; padding:10px 14px; border-radius:6px; border:none; font-size:15px; cursor:pointer; }
+    .btn:disabled { opacity:0.55; cursor:default; }
+    .result { margin-top:10px; font-weight:700; }
+    .answer { display:none; margin-top:8px; padding:10px; background:#f0fffd; border-left:4px solid var(--accent-dark); border-radius:4px; white-space:pre-wrap; }
+    textarea { width:100%; min-height:120px; padding:8px; margin-top:8px; font-family:inherit; font-size:14px; }
+    .note { color:#333; font-size:0.95em; margin-bottom:8px; }
+    a { color:var(--accent-dark); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .meta { font-size:0.95em; color:#444; margin-top:6px; }
+    .grid { display:grid; grid-template-columns:1fr; gap:12px; }
+    @media(min-width:880px){ .grid{ grid-template-columns:1fr 1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AS Level Computer Science (9618)</h1>
+    <h2>Chapter 2 — Data Transmission: Assessment</h2>
+    <p class="credit">Prepared by Ravi Raju</p>
+    <p class="note">Instructions: Complete all parts. Click <strong>Submit</strong> once. MCQs are auto-graded; Short and Exam-style model answers are revealed on submit. There is <strong>no reset</strong>.</p>
+  </header>
+
+  <!-- PART A: MCQs -->
+  <section class="section" id="partA">
+    <h2>Part A — Multiple Choice Questions (15)</h2>
+    <p class="meta">Auto-graded. Choose the single best answer for each question. Results & feedback appear after you press <em>Submit MCQs</em>.</p>
+
+    <form id="mcqForm">
+      <ol>
+        <li>
+          Which statement best describes a WAN?
+          <div class="mcq-options">
+            <label><input type="radio" name="q1" value="a"> A network confined to one building</label>
+            <label><input type="radio" name="q1" value="b"> A network connecting sites over large distances typically leased from a carrier</label>
+            <label><input type="radio" name="q1" value="c"> A peer-to-peer small office network</label>
+            <label><input type="radio" name="q1" value="d"> A type of wireless LAN</label>
+          </div>
+        </li>
+
+        <li>
+          Which medium offers the highest bandwidth and least susceptibility to electromagnetic interference?
+          <div class="mcq-options">
+            <label><input type="radio" name="q2" value="a"> Twisted-pair copper</label>
+            <label><input type="radio" name="q2" value="b"> Coaxial cable</label>
+            <label><input type="radio" name="q2" value="c"> Fibre-optic cable</label>
+            <label><input type="radio" name="q2" value="d"> RF radio (low frequency)</label>
+          </div>
+        </li>
+
+        <li>
+          A star topology’s primary weakness is:
+          <div class="mcq-options">
+            <label><input type="radio" name="q3" value="a"> A single cable shared by all nodes</label>
+            <label><input type="radio" name="q3" value="b"> Poor scalability</label>
+            <label><input type="radio" name="q3" value="c"> Dependence on a central device whose failure can disable the network</label>
+            <label><input type="radio" name="q3" value="d"> High error rates on each link</label>
+          </div>
+        </li>
+
+        <li>
+          What is the main difference between synchronous and asynchronous transmission?
+          <div class="mcq-options">
+            <label><input type="radio" name="q4" value="a"> Synchronous uses start/stop bits; asynchronous uses a clock signal</label>
+            <label><input type="radio" name="q4" value="b"> Synchronous uses a shared clock (or embedded clock) while asynchronous uses start and stop bits for each byte</label>
+            <label><input type="radio" name="q4" value="c"> Synchronous is always slower than asynchronous</label>
+            <label><input type="radio" name="q4" value="d"> Only asynchronous supports full-duplex</label>
+          </div>
+        </li>
+
+        <li>
+          In CSMA/CD (legacy Ethernet), what does a station do when it detects a collision?
+          <div class="mcq-options">
+            <label><input type="radio" name="q5" value="a"> Continues transmitting until finished</label>
+            <label><input type="radio" name="q5" value="b"> Sends a jamming signal, stops, waits a random backoff, then retries</label>
+            <label><input type="radio" name="q5" value="c"> Switches to a different frequency</label>
+            <label><input type="radio" name="q5" value="d"> Uses error correction to repair the bits</label>
+          </div>
+        </li>
+
+        <li>
+          What is a primary advantage of packet switching over circuit switching on the Internet?
+          <div class="mcq-options">
+            <label><input type="radio" name="q6" value="a"> Dedicated resource allocation for the whole session</label>
+            <label><input type="radio" name="q6" value="b"> Better use of network resources by allowing many transmissions to share links</label>
+            <label><input type="radio" name="q6" value="c"> Zero latency for each transmission</label>
+            <label><input type="radio" name="q6" value="d"> Guaranteed delivery without retransmission</label>
+          </div>
+        </li>
+
+        <li>
+          Which error-detection method uses polynomial division to detect corrupted bit patterns?
+          <div class="mcq-options">
+            <label><input type="radio" name="q7" value="a"> Parity bit</label>
+            <label><input type="radio" name="q7" value="b"> Simple checksum</label>
+            <label><input type="radio" name="q7" value="c"> Cyclic Redundancy Check (CRC)</label>
+            <label><input type="radio" name="q7" value="d"> MD5 hash</label>
+          </div>
+        </li>
+
+        <li>
+          A peer-to-peer file sharing model typically:
+          <div class="mcq-options">
+            <label><input type="radio" name="q8" value="a"> Stores all files on a single central server</label>
+            <label><input type="radio" name="q8" value="b"> Eliminates the need for any client software</label>
+            <label><input type="radio" name="q8" value="c"> Distributes file pieces among many peers, enabling parallel downloads</label>
+            <label><input type="radio" name="q8" value="d"> Prevents simultaneous downloads</label>
+          </div>
+        </li>
+
+        <li>
+          Which wireless band typically penetrates walls best and suffers less attenuation by obstacles?
+          <div class="mcq-options">
+            <label><input type="radio" name="q9" value="a"> Infrared</label>
+            <label><input type="radio" name="q9" value="b"> Microwave (high GHz)</label>
+            <label><input type="radio" name="q9" value="c"> Low-frequency radio (sub-GHz)</label>
+            <label><input type="radio" name="q9" value="d"> Millimetre-wave (very high frequency)</label>
+          </div>
+        </li>
+
+        <li>
+          Which cable type will need repeaters least often for long-distance transmission?
+          <div class="mcq-options">
+            <label><input type="radio" name="q10" value="a"> Twisted pair</label>
+            <label><input type="radio" name="q10" value="b"> Coaxial</label>
+            <label><input type="radio" name="q10" value="c"> Fibre-optic</label>
+            <label><input type="radio" name="q10" value="d"> Unshielded telephone copper</label>
+          </div>
+        </li>
+
+        <li>
+          Which satellite orbit requires only three satellites for global geostationary coverage conceptually?
+          <div class="mcq-options">
+            <label><input type="radio" name="q11" value="a"> Low Earth Orbit (LEO)</label>
+            <label><input type="radio" name="q11" value="b"> Medium Earth Orbit (MEO)</label>
+            <label><input type="radio" name="q11" value="c"> Geostationary Earth Orbit (GEO)</label>
+            <label><input type="radio" name="q11" value="d"> Polar Sun-synchronous orbit</label>
+          </div>
+        </li>
+
+        <li>
+          In a packet, which part typically carries the routing information (addresses and sequence)?
+          <div class="mcq-options">
+            <label><input type="radio" name="q12" value="a"> Payload</label>
+            <label><input type="radio" name="q12" value="b"> Trailer only</label>
+            <label><input type="radio" name="q12" value="c"> Header</label>
+            <label><input type="radio" name="q12" value="d"> Checksum field only</label>
+          </div>
+        </li>
+
+        <li>
+          Why did NAT (Network Address Translation) become common in private networks?
+          <div class="mcq-options">
+            <label><input type="radio" name="q13" value="a"> To allow every internal host to have a unique public IPv4 address</label>
+            <label><input type="radio" name="q13" value="b"> To conserve public IPv4 address space by letting many private hosts share a single public address</label>
+            <label><input type="radio" name="q13" value="c"> To speed up routing on the internet</label>
+            <label><input type="radio" name="q13" value="d"> To provide automatic encryption</label>
+          </div>
+        </li>
+
+        <li>
+          CIDR notation 195.12.6.14/21 indicates:
+          <div class="mcq-options">
+            <label><input type="radio" name="q14" value="a"> 21 bits are used for host ID</label>
+            <label><input type="radio" name="q14" value="b"> 21 bits are used for netID (network prefix)</label>
+            <label><input type="radio" name="q14" value="c"> There are 21 possible hosts</label>
+            <label><input type="radio" name="q14" value="d"> It's an IPv6 address</label>
+          </div>
+        </li>
+
+        <li>
+          Which statement about DNS (Domain Name Service) is correct?
+          <div class="mcq-options">
+            <label><input type="radio" name="q15" value="a"> DNS resolves domain names to IP addresses using a centralized single server</label>
+            <label><input type="radio" name="q15" value="b"> DNS is a hierarchical distributed database system with root and authoritative servers</label>
+            <label><input type="radio" name="q15" value="c"> DNS is only used for email addresses and not websites</label>
+            <label><input type="radio" name="q15" value="d"> DNS directly replaces NAT functionality</label>
+          </div>
+        </li>
+      </ol>
+
+      <div style="margin-top:12px;">
+        <button type="button" class="btn" id="mcqSubmit">Submit MCQs</button>
+        <div id="mcqResult" class="result" aria-live="polite"></div>
+      </div>
+    </form>
+  </section>
+
+  <!-- PART B: Short Questions -->
+  <section class="section" id="partB">
+    <h2>Part B — Short Questions (15)</h2>
+    <p class="meta">Write brief answers. Model answers are hidden and will be revealed when you press <strong>Submit Short Answers</strong>.</p>
+
+    <ol>
+      <li class="sq">Explain the benefits of connecting PCs using a LAN instead of leaving them as stand-alone machines.
+        <div class="answer" id="s1">Model answer: LANs allow resource sharing (printers, files, software on servers), centralized backups, easier updates, email for communication, and support for shared services (print servers, file servers), improving efficiency and reducing cost.</div>
+      </li>
+
+      <li class="sq">Define the client-server model and give one example of a thin client and one of a thick client.
+        <div class="answer" id="s2">Model answer: Client-server: clients request services/applications from centralized servers. Thin client: browser using remote web app (e.g., Google Docs). Thick client: desktop app that may download data and perform processing locally (e.g., a desktop email client or a heavy CAD app).</div>
+      </li>
+
+      <li class="sq">List three characteristics that typically distinguish a WAN from a LAN.
+        <div class="answer" id="s3">Model answer: WANs cover large geographic areas, are typically leased from carriers (not owned), use long-distance media (fibre), and involve switching infrastructure between sites.</div>
+      </li>
+
+      <li class="sq">Explain why serial transmission is preferred for USB and long-distance links.
+        <div class="answer" id="s4">Model answer: Serial uses fewer conductors (lower cost), avoids timing skew between parallel wires, is reliable over long distances, and modern serial links (e.g., USB) use high speeds and embedded clocking to achieve high throughput.</div>
+      </li>
+
+      <li class="sq">Describe half-duplex and give an example technology that commonly uses it.
+        <div class="answer" id="s5">Model answer: Half-duplex allows data flow both ways but not simultaneously; devices must take turns (example: walkie-talkies or some legacy Ethernet repeater segments).</div>
+      </li>
+
+      <li class="sq">What is the purpose of a repeater in a wired LAN?
+        <div class="answer" id="s6">Model answer: A repeater regenerates and strengthens attenuated signals to extend the maximum transmission distance, restoring signal amplitude for reliable reception.</div>
+      </li>
+
+      <li class="sq">Give two reasons why fibre-optic is chosen for internet backbone links.
+        <div class="answer" id="s7">Model answer: Very high bandwidth (supports high data rates) and low attenuation/interference (long distances without many repeaters), and high security (difficult to tap without detection).</div>
+      </li>
+
+      <li class="sq">Briefly explain what an access ISP and a tier-1 ISP are.
+        <div class="answer" id="s8">Model answer: Access ISP provides internet connectivity to end-users (residential/business). Tier-1 ISPs are backbone providers with global reach; they exchange traffic at IXPs and form the top of the routing hierarchy.</div>
+      </li>
+
+      <li class="sq">State the Nyquist/aliasing concern when sampling a signal for digitisation.
+        <div class="answer" id="s9">Model answer: To avoid aliasing, sample at least twice the highest frequency component of the signal (Nyquist rate); otherwise higher frequencies fold into lower ones and distort the signal.</div>
+      </li>
+
+      <li class="sq">What role does a router play in the internet mesh?
+        <div class="answer" id="s10">Model answer: Routers forward packets between networks, choose best paths using routing tables and protocols, and connect different IP networks across the mesh of backbone and regional links.</div>
+      </li>
+
+      <li class="sq">Explain briefly why satellite links have larger propagation delays than fibre.
+        <div class="answer" id="s11">Model answer: Satellites (especially GEO) are far from Earth (tens of thousands of km), so signals travel much longer distances at light speed compared to fibre paths, causing higher round-trip latency.</div>
+      </li>
+
+      <li class="sq">Describe how APs (Wireless Access Points) integrate into a wired LAN.
+        <div class="answer" id="s12">Model answer: An AP connects via Ethernet to the wired LAN and provides radio-based connectivity for wireless NICs; it bridges wireless clients onto the wired subnet and often handles authentication/traffic management.</div>
+      </li>
+
+      <li class="sq">What is DNS caching and what is a potential drawback?
+        <div class="answer" id="s13">Model answer: DNS caching stores recent name resolution results to speed up lookups; drawback: cached records may become stale if a domain's IP address changes (out-of-date mapping).</div>
+      </li>
+
+      <li class="sq">Give two benefits and one disadvantage of using NAT for a small office network.
+        <div class="answer" id="s14">Model answer: Benefits: conserves public IPv4 addresses and provides a layer of isolation/security; disadvantage: complicates inbound connections (port forwarding needed) and can break some protocols requiring end-to-end addressing.</div>
+      </li>
+
+      <li class="sq">Why are root DNS servers replicated and distributed worldwide?
+        <div class="answer" id="s15">Model answer: Replication improves reliability, load distribution, and latency; distributed copies ensure queries can be resolved locally and avoids single points of failure.</div>
+      </li>
+    </ol>
+
+    <div style="margin-top:12px;">
+      <button class="btn" id="shortSubmit">Submit Short Answers</button>
+    </div>
+  </section>
+
+  <!-- PART C: Exam-style -->
+  <section class="section" id="partC">
+    <h2>Part C — Exam-Style Questions (15)</h2>
+    <p class="meta">Answer in detail. Use provided textareas. Model answers hidden — they will display after you press <strong>Submit Exam Answers</strong>.</p>
+
+    <ol>
+      <li>
+        <strong>1.</strong> Describe the evolution from mainframe time-sharing systems to LAN/WAN architectures, and explain two consequences for how organisations structure IT today.
+        <textarea id="e1"></textarea>
+        <div class="answer" id="m1">Model answer:
+Mainframes with terminals evolved into distributed PCs and LANs, enabling decentralised working. WANs connected multiple sites, enabling central resources to be shared and remote access. Consequences: decentralised user computing with centralised services (file/app servers); need for robust network management, security policies, and WAN links for site integration.</div>
+      </li>
+
+      <li>
+        <strong>2.</strong> Compare and contrast the client-server model and peer-to-peer model with respect to scalability, fault tolerance, and security — give examples of applications suited to each model.
+        <textarea id="e2"></textarea>
+        <div class="answer" id="m2">Model answer:
+Client-server: centralised servers provide resources; scalable by adding servers, but single-server failure can be critical unless redundancy is used; easier to secure centrally (e.g., enterprise DBs, web services). Peer-to-peer: distributes load across peers (good scalability for file distribution), more resilient to single-server failure but harder to secure and manage (e.g., torrent networks). Choose client-server for controlled data and transactions; choose P2P for decentralised content distribution.</div>
+      </li>
+
+      <li>
+        <strong>3.</strong> Explain, with a diagram description, why parallel transmission suffers from timing skew and how that affects long-distance reliability.
+        <textarea id="e3"></textarea>
+        <div class="answer" id="m3">Model answer:
+Parallel uses multiple conductors so bits transmitted simultaneously must arrive aligned. Due to differences in wire length/impedance and propagation delays, one conductor may lag/lead (skew), causing bit misalignment and errors. Over long distances skew increases, requiring complex synchronization or limiting distance; hence serial high-speed links with embedded clocking are preferred for long runs.</div>
+      </li>
+
+      <li>
+        <strong>4.</strong> Explain the role of start and stop bits in asynchronous transmission; show a sample framed byte (for ASCII 'A') including start/stop bits and parity (if used).
+        <textarea id="e4"></textarea>
+        <div class="answer" id="m4">Model answer:
+Asynchronous frames use a start bit (0) to signal the beginning, then data bits (LSB first), optional parity, then stop bit(s) (1) to mark end and allow receiver to resync. 'A' = 0x41 = 01000001 (LSB first: 1 0 0 0 0 0 1 0). Frame sample (no parity): [Start 0] [1 0 0 0 0 0 1 0] [Stop 1]. Parity bit added if needed to detect single-bit errors.</div>
+      </li>
+
+      <li>
+        <strong>5.</strong> Show with calculation how many bytes a 1366×768 image at 24-bit colour uses (show bits→bytes→MiB conversion).
+        <textarea id="e5"></textarea>
+        <div class="answer" id="m5">Model answer:
+Bits = 1366 × 768 × 24 = 25,178,112 bits.
+Bytes = ÷8 = 3,147,264 bytes.
+MiB = ÷1024 ÷1024 ≈ 3.00 MiB (≈3 MiB). Note: file headers add overhead.</div>
+      </li>
+
+      <li>
+        <strong>6.</strong> Describe parity checking, checksum and CRC — compare detection capability and typical use cases.
+        <textarea id="e6"></textarea>
+        <div class="answer" id="m6">Model answer:
+Parity: single-bit parity adds 1 bit per byte to detect odd number of bit flips; cheap but weak. Checksum: sums words/bytes and compares; can detect many errors but collisions possible. CRC: polynomial division produces a remainder (CRC code); strong at detecting burst errors and widely used in link-layer protocols and storage. Use parity for simple serial links, checksum for quick integrity checks, CRC for robust link error detection.</div>
+      </li>
+
+      <li>
+        <strong>7.</strong> Explain ARQ (Automatic Repeat reQuest) including ACK/NAK, timeouts and how selective repeat improves efficiency over stop-and-wait.
+        <textarea id="e7"></textarea>
+        <div class="answer" id="m7">Model answer:
+ARQ uses ACKs to confirm packet receipt; on timeout or NAK sender retransmits. Stop-and-wait sends one packet then waits — inefficient on high-latency links. Sliding-window protocols (selective repeat) allow multiple outstanding packets and only retransmit missing ones, improving throughput by keeping pipeline full and reducing unnecessary retransmissions.</div>
+      </li>
+
+      <li>
+        <strong>8.</strong> Explain how CIDR improves address allocation over classful addressing; give an example calculation showing /21 gives how many hosts.
+        <textarea id="e8"></textarea>
+        <div class="answer" id="m8">Model answer:
+CIDR allows arbitrary prefix lengths to allocate addresses matching need. /21 means 21-bit network prefix leaving 11 bits for hosts: 2^11 = 2048 host addresses (useful for subnets sized to requirement), avoiding waste inherent in classful fixed blocks.</div>
+      </li>
+
+      <li>
+        <strong>9.</strong> Show step-by-step conversion of hexadecimal 2A6 to decimal.
+        <textarea id="e9"></textarea>
+        <div class="answer" id="m9">Model answer:
+2A6₁₆ = 2×16² + A(10)×16 + 6×1 = 2×256 + 10×16 + 6 = 512 + 160 + 6 = 678₁₀.</div>
+      </li>
+
+      <li>
+        <strong>10.</strong> Discuss trade-offs when choosing wireless vs wired for a new office: include security, cost, throughput, interference, mobility and installation time.
+        <textarea id="e10"></textarea>
+        <div class="answer" id="m10">Model answer:
+Wireless: lower installation cost, faster deployment, mobility, but lower and variable throughput, more interference, regulatory constraints and weaker physical security. Wired (fibre/twisted pair): higher installation cost, better bandwidth, predictable latency, more secure physically. Choose based on scale, required QoS, mobility needs, and budget.</div>
+      </li>
+
+      <li>
+        <strong>11.</strong> Explain how DNS resolves a domain name (summary of iterative/recursive lookup and role of root/TLD/authoritative servers).
+        <textarea id="e11"></textarea>
+        <div class="answer" id="m11">Model answer:
+A resolver queries local DNS cache or recursive resolver; if unknown, resolver queries root servers to find TLD servers, then TLD to find authoritative name server for the domain, which returns the IP. Caching at each stage speeds future lookups; recursive vs iterative queries determine who follows referrals.</div>
+      </li>
+
+      <li>
+        <strong>12.</strong> Describe NAT behaviour for outgoing connections and one method (port forwarding) to allow inbound connections to an internal host.
+        <textarea id="e12"></textarea>
+        <div class="answer" id="m12">Model answer:
+NAT rewrites internal private source IP/port to a public IP/port on the NAT gateway and records mapping to forward replies. For inbound services, port forwarding on the NAT maps a specific public port to an internal host:incoming packets for that port are forwarded to the internal IP:port.</div>
+      </li>
+
+      <li>
+        <strong>13.</strong> Explain why streaming services use buffering and rate adaptation (adaptive bitrate) and how that affects user experience on varying connections.
+        <textarea id="e13"></textarea>
+        <div class="answer" id="m13">Model answer:
+Buffers smooth jitter and temporary bandwidth dips; adaptive bitrate allows the server/client to switch to lower/higher quality streams depending on measured bandwidth to avoid rebuffering. This balances quality vs continuity: larger buffer reduces rebuffering but increases startup latency.</div>
+      </li>
+
+      <li>
+        <strong>14.</strong> Give an outline of how satellite altitude (LEO vs MEO vs GEO) affects coverage, latency and handover requirements.
+        <textarea id="e14"></textarea>
+        <div class="answer" id="m14">Model answer:
+GEO (≈35,786 km) gives wide coverage with fixed ground footprint (good for broadcast) but high latency. MEO and LEO are closer (MEO ~2–15k km; LEO few hundred km) -> lower latency and more satellites needed for coverage; LEO requires frequent handovers as satellites move relative to ground.</div>
+      </li>
+
+      <li>
+        <strong>15.</strong> Discuss IPv6 addressing benefits and a major deployment challenge for organisations.
+        <textarea id="e15"></textarea>
+        <div class="answer" id="m15">Model answer:
+IPv6 provides vastly more addresses (128-bit), simplified header options, and built-in autoconfiguration and security features. Deployment challenge: legacy systems, NAT dependencies, and the need to update networking equipment, software, and operational processes; transition strategies (dual-stack, tunnels) add complexity.</div>
+      </li>
+    </ol>
+
+    <div style="margin-top:12px;">
+      <button class="btn" id="examSubmit">Submit Exam Answers</button>
+    </div>
+  </section>
+
+ // <p style="margin-top:14px;"><a href="as-2-data-transmission.html">&#8592; Back to Chapter 2 Notes</a></p>
+<p><a href="as-2-communication.html">&larr; Back to Chapter 2 Notes</a></p>
+  
+<footer style="margin-top:18px; text-align:center;">
+    <p>© 2025 Ravi Raju - AS Level Computer Science</p>
+  </footer>
+
+  <script>
+    // MCQ answers (q1..q15)
+    const mcqAnswerKey = {
+      q1:'b', q2:'c', q3:'c', q4:'b', q5:'b',
+      q6:'b', q7:'c', q8:'c', q9:'c', q10:'c',
+      q11:'c', q12:'c', q13:'b', q14:'b', q15:'b'
+    };
+
+    // Disable multiple submissions and reveal answers
+    document.getElementById('mcqSubmit').addEventListener('click', function() {
+      const btn = this;
+      if (btn.disabled) return;
+      let score = 0, total = 15;
+      for (let i=1;i<=total;i++){
+        const sel = document.querySelector('input[name="q'+i+'"]:checked');
+        if (sel && sel.value === mcqAnswerKey['q'+i]) score++;
+      }
+      const resultDiv = document.getElementById('mcqResult');
+      const percent = Math.round((score/total)*100);
+      let comment = percent >= 80 ? 'Excellent — strong grasp.' :
+                    percent >= 60 ? 'Good — minor revision needed.' :
+                    percent >= 40 ? 'Fair — more practice suggested.' :
+                    'Weak — revisit the chapter thoroughly.';
+      resultDiv.textContent = `MCQ Score: ${score} / ${total} (${percent}%). ${comment}`;
+      // disable MCQ submit
+      btn.disabled = true;
+      btn.style.cursor = 'default';
+      // disable further changes to MCQ radio inputs (lock answers)
+      const inputs = document.querySelectorAll('#mcqForm input[type=radio]');
+      inputs.forEach(i => i.disabled = true);
+    });
+
+    // Reveal short answers on submit
+    document.getElementById('shortSubmit').addEventListener('click', function(){
+      const btn = this;
+      if (btn.disabled) return;
+      for (let i=1;i<=15;i++){
+        const el = document.getElementById('s'+i);
+        if (el) el.style.display = 'block';
+      }
+      btn.disabled = true;
+      btn.style.cursor = 'default';
+    });
+
+    // Reveal exam model answers and disable textareas
+    document.getElementById('examSubmit').addEventListener('click', function(){
+      const btn = this;
+      if (btn.disabled) return;
+      for (let i=1;i<=15;i++){
+        const el = document.getElementById('m'+i);
+        if (el) el.style.display = 'block';
+        const ta = document.getElementById('e'+i);
+        if (ta) ta.disabled = false; // keep user text visible; not overwritten
+      }
+      btn.disabled = true;
+      btn.style.cursor = 'default';
+      // Optionally focus to top of revealed answers
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>

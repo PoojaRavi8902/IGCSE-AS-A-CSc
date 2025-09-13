@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AS Level Computer Science – Chapter 5 Assessment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      background: #f5f5f5;
+    }
+    h1, h2 {
+      color: #003366;
+    }
+    .question {
+      background: #fff;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    .answer {
+      display: none;
+      margin-top: 8px;
+      padding: 8px;
+      background: #e6f2ff;
+      border-left: 3px solid #3399ff;
+    }
+    button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      background: #0066cc;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #004d99;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>AS Level Computer Science – Chapter 5 Assessment</h1>
+  <p><strong>Prepared by Ravi Raju</strong></p>
+
+  <!-- SECTION A: MCQs -->
+  <h2>Section A: Multiple Choice Questions (MCQs)</h2>
+  <form id="mcqForm">
+    <div class="question">
+      <p>1. Which of the following is a primary function of an operating system?</p>
+      <input type="radio" name="q1" value="a"> A. Writing application programs<br>
+      <input type="radio" name="q1" value="b"> B. Managing computer hardware and software resources<br>
+      <input type="radio" name="q1" value="c"> C. Compiling programs<br>
+      <input type="radio" name="q1" value="d"> D. Designing web pages<br>
+      <div class="answer">Answer: B</div>
+    </div>
+
+    <div class="question">
+      <p>2. Which type of software controls the hardware directly?</p>
+      <input type="radio" name="q2" value="a"> A. Application software<br>
+      <input type="radio" name="q2" value="b"> B. System software<br>
+      <input type="radio" name="q2" value="c"> C. Utility software<br>
+      <input type="radio" name="q2" value="d"> D. Programming language<br>
+      <div class="answer">Answer: B</div>
+    </div>
+
+    <div class="question">
+      <p>3. Which of these is NOT a task of an operating system?</p>
+      <input type="radio" name="q3" value="a"> A. Memory management<br>
+      <input type="radio" name="q3" value="b"> B. Scheduling processes<br>
+      <input type="radio" name="q3" value="c"> C. Writing Java programs<br>
+      <input type="radio" name="q3" value="d"> D. Device management<br>
+      <div class="answer">Answer: C</div>
+    </div>
+
+    <div class="question">
+      <p>4. What is a process?</p>
+      <input type="radio" name="q4" value="a"> A. A file on disk<br>
+      <input type="radio" name="q4" value="b"> B. A program that has begun execution<br>
+      <input type="radio" name="q4" value="c"> C. A type of device driver<br>
+      <input type="radio" name="q4" value="d"> D. A disk sector<br>
+      <div class="answer">Answer: B</div>
+    </div>
+
+    <div class="question">
+      <p>5. Which of the following is an example of utility software?</p>
+      <input type="radio" name="q5" value="a"> A. Disk defragmenter<br>
+      <input type="radio" name="q5" value="b"> B. Word processor<br>
+      <input type="radio" name="q5" value="c"> C. Compiler<br>
+      <input type="radio" name="q5" value="d"> D. Java Virtual Machine<br>
+      <div class="answer">Answer: A</div>
+    </div>
+
+    <!-- Continue for MCQs 6–15 -->
+    <div class="question">
+      <p>6. What does memory protection prevent?</p>
+      <input type="radio" name="q6" value="a"> A. Programs accessing the same memory as other programs<br>
+      <input type="radio" name="q6" value="b"> B. CPU overheating<br>
+      <input type="radio" name="q6" value="c"> C. Disk fragmentation<br>
+      <input type="radio" name="q6" value="d"> D. Network errors<br>
+      <div class="answer">Answer: A</div>
+    </div>
+
+    <div class="question">
+      <p>7. What is a Dynamic Link Library (DLL)?</p>
+      <input type="radio" name="q7" value="a"> A. A programming language<br>
+      <input type="radio" name="q7" value="b"> B. A type of library routine that can be used by multiple programs simultaneously<br>
+      <input type="radio" name="q7" value="c"> C. A hard disk sector<br>
+      <input type="radio" name="q7" value="d"> D. An operating system module that formats disks<br>
+      <div class="answer">Answer: B</div>
+    </div>
+
+    <div class="question">
+      <p>8. Which of the following is an example of file management activity?</p>
+      <input type="radio" name="q8" value="a"> A. Scheduling processes<br>
+      <input type="radio" name="q8" value="b"> B. Directory structure maintenance<br>
+      <input type="radio" name="q8" value="c"> C. CPU instruction execution<br>
+      <input type="radio" name="q8" value="d"> D. Debugging code<br>
+      <div class="answer">Answer: B</div>
+    </div>
+
+    <div class="question">
+      <p>9. What is the primary purpose of a Java Virtual Machine (JVM)?</p>
+      <input type="radio" name="q9" value="a"> A. Compile Java programs to machine code<br>
+      <input type="radio" name="q9" value="b"> B. Run Java byte code on any computer with a JVM installed<br>
+      <input type="radio" name="q9" value="c"> C. Design graphical user interfaces<br>
+      <input type="radio" name="q9" value="d"> D. Debug Python programs<br>
+      <div class="answer">Answer: B</div>
+    </div>
+
+    <div class="question">
+      <p>10. Which IDE feature automatically indents code and color-codes keywords?</p>
+      <input type="radio" name="q10" value="a"> A. Debugging<br>
+      <input type="radio" name="q10" value="b"> B. Prettyprinting<br>
+      <input type="radio" name="q10" value="c"> C. Context-sensitive prompts<br>
+      <input type="radio" name="q10" value="d"> D. Dynamic syntax check<br>
+      <div class="answer">Answer: B</div>
+    </div>
+
+    <div class="question">
+      <p>11. Which of the following helps recover corrupted files on a disk?</p>
+      <input type="radio" name="q11" value="a"> A. Compiler<br>
+      <input type="radio" name="q11" value="b"> B. Disk repair utility<br>
+      <input type="radio" name="q11" value="c"> C. Interpreter<br>
+      <input type="radio" name="q11" value="d"> D. IDE<br>
+      <div class="answer">Answer: B</div>
+    </div>
+
+    <div class="question">
+      <p>12. Which of the following is NOT a typical OS security management activity?</p>
+      <input type="radio" name="q12" value="a"> A. Prevention of intrusion<br>
+      <input type="radio" name="q12" value="b"> B. Ensuring data privacy<br>
+      <input type="radio" name="q12" value="c"> C. Creating dynamic linked libraries<br>
+      <input type="radio" name="q12" value="d"> D. Data recovery provision<br>
+      <div class="answer">Answer: C</div>
+    </div>
+
+    <div class="question">
+      <p>13. What is the purpose of a backup utility?</p>
+      <input type="radio" name="q13" value="a"> A. Run programs faster<br>
+      <input type="radio" name="q13" value="b"> B. Schedule and create copies of data to prevent loss<br>
+      <input type="radio" name="q13" value="c"> C. Edit source code<br>
+      <input type="radio" name="q13" value="d"> D. Manage device drivers<br>
+      <div class="answer">Answer: B</div>
+    </div>
+
+    <div class="question">
+      <p>14. What is meant by ‘scheduling of processes’ in an OS?</p>
+      <input type="radio" name="q14" value="a"> A. Arranging files on disk<br>
+      <input type="radio" name="q14" value="b"> B. Determining the order in which processes are given CPU time<br>
+      <input type="radio" name="q14" value="c"> C. Assigning memory addresses<br>
+      <input type="radio" name="q14" value="d"> D. Creating DLL routines<br>
+      <div class="answer">Answer: B</div>
+    </div>
+
+    <div class="question">
+      <p>15. Which IDE feature allows stepping through code instruction by instruction?</p>
+      <input type="radio" name="q15" value="a"> A. Prettyprinting<br>
+      <input type="radio" name="q15" value="b"> B. Breakpoints in debugging<br>
+      <input type="radio" name="q15" value="c"> C. Context-sensitive prompts<br>
+      <input type="radio" name="q15" value="d"> D. Disk defragmenter<br>
+      <div class="answer">Answer: B</div>
+    </div>
+
+    <button type="button" onclick="showMCQAnswers()">SUBMIT</button>
+  </form>
+
+  <script>
+    function showMCQAnswers() {
+      const answers = document.querySelectorAll('#mcqForm .answer');
+      answers.forEach(ans => ans.style.display = 'block');
+    }
+  </script>
+  <!-- SECTION B: Short Answer Questions -->
+  <h2>Section B: Short Answer Questions</h2>
+  <form id="shortAnswerForm">
+    <div class="question">
+      <p>1. Define system software.</p>
+      <textarea rows="3" cols="80"></textarea>
+      <div class="answer">Answer: System software is software that controls computer hardware and provides an environment for running application software.</div>
+    </div>
+
+    <div class="question">
+      <p>2. List two main types of user interfaces provided by operating systems.</p>
+      <textarea rows="3" cols="80"></textarea>
+      <div class="answer">Answer: Command-line interface (CLI) and Graphical User Interface (GUI).</div>
+    </div>
+
+    <div class="question">
+      <p>3. What is the role of an operating system in program–hardware interaction?</p>
+      <textarea rows="3" cols="80"></textarea>
+      <div class="answer">Answer: The OS ensures that hardware executes the instructions requested by software correctly and efficiently.</div>
+    </div>
+
+    <div class="question">
+      <p>4. Explain what is meant by a process in an operating system.</p>
+      <textarea rows="3" cols="80"></textarea>
+      <div class="answer">Answer: A process is a program that has begun execution and is currently managed by the operating system.</div>
+    </div>
+
+    <div class="question">
+      <p>5. Name two tasks involved in memory management.</p>
+      <textarea rows="3" cols="80"></textarea>
+      <div class="answer">Answer: Memory protection and memory usage optimization (including virtual memory management).</div>
+    </div>
+
+    <div class="question">
+      <p>6. What is the purpose of a device driver?</p>
+      <textarea rows="3" cols="80"></textarea>
+      <div class="answer">Answer: A device driver allows the operating system and software to communicate with and control hardware devices.</div>
+    </div>
+
+    <div class="question">
+      <p>7. List three features of file management in an OS.</p>
+      <textarea rows="3" cols="80"></textarea>
+      <div class="answer">Answer: File naming conventions, directory/folder structures, and access control mechanisms.</div>
+    </div>
+
+    <div class="question">
+      <p>8. Explain the function of a disk defragmenter.</p>
+      <textarea rows="3" cols="80"></textarea>
+      <div class="answer">Answer: A disk defragmenter reorganizes fragmented files on a disk so that each file occupies contiguous sectors, improving performance.</div>
+    </div>
+
+    <div class="question">
+      <p>9. What is the purpose of backup software?</p>
+      <textarea rows="3" cols="80"></textarea>
+      <div class="answer">Answer: Backup software creates copies of data according to a schedule to prevent data loss.</div>
+    </div>
+
+    <div class="question">
+      <p>10. Explain the advantage of a Dynamic Link Library (DLL).</p>
+      <textarea rows="3" cols="80"></textarea>
+      <div class="answer">Answer: DLLs allow multiple programs to share routines in memory, reducing storage and memory usage while enabling updates to routines without modifying each program.</div>
+    </div>
+
+    <div class="question">
+      <p>11. What is the difference between an interpreter and a compiler?</p>
+      <textarea rows="3" cols="80"></textarea>
+      <div class="answer">Answer: An interpreter executes source code line by line and detects errors immediately, while a compiler translates the entire source code into object code for later execution.</div>
+    </div>
+
+    <div class="question">
+      <p>12. Give one advantage of using an IDE for programming.</p>
+      <textarea rows="3" cols="80"></textarea>
+      <div class="answer">Answer: An IDE can provide features like syntax highlighting, debugging tools, and auto-completion to help programmers write and correct code efficiently.</div>
+    </div>
+
+    <div class="question">
+      <p>13. What is meant by “dynamic syntax check” in an IDE?</p>
+      <textarea rows="3" cols="80"></textarea>
+      <div class="answer">Answer: Dynamic syntax check automatically detects and highlights syntax errors as the programmer types code.</div>
+    </div>
+
+    <div class="question">
+      <p>14. Explain why operating systems are required to perform error detection and recovery.</p>
+      <textarea rows="3" cols="80"></textarea>
+      <div class="answer">Answer: Operating systems detect errors to prevent incorrect execution of programs or hardware failures, and provide recovery mechanisms to avoid data loss.</div>
+    </div>
+
+    <div class="question">
+      <p>15. Define utility software and give two examples.</p>
+      <textarea rows="3" cols="80"></textarea>
+      <div class="answer">Answer: Utility software is a program that performs maintenance or management tasks for the computer. Examples include disk repair tools and virus checkers.</div>
+    </div>
+
+    <button type="button" onclick="showShortAnswers()">SUBMIT</button>
+  </form>
+
+  <script>
+    function showShortAnswers() {
+      const answers = document.querySelectorAll('#shortAnswerForm .answer');
+      answers.forEach(ans => ans.style.display = 'block');
+    }
+  </script>
+  <!-- SECTION C: Exam Style Questions -->
+  <h2>Section C: Exam Style Questions</h2>
+  
+  <div class="exam-question">
+    <p>1. Describe the main functions of an operating system and explain why it is essential for modern computers.</p>
+    <textarea rows="5" cols="100"></textarea>
+    <button type="button" onclick="revealExamAnswer(1)">SUBMIT</button>
+    <div class="exam-answer" id="exam-answer-1">Answer: The OS manages hardware resources, provides a user interface, controls processes, memory, devices, files, security, and error recovery. It is essential because it enables efficient use of hardware and smooth execution of software.</div>
+  </div>
+
+  <div class="exam-question">
+    <p>2. Explain the difference between system software and application software with examples.</p>
+    <textarea rows="5" cols="100"></textarea>
+    <button type="button" onclick="revealExamAnswer(2)">SUBMIT</button>
+    <div class="exam-answer" id="exam-answer-2">Answer: System software controls hardware and provides an environment for applications (e.g., operating systems, device drivers). Application software performs tasks for users (e.g., word processors, games).</div>
+  </div>
+
+  <div class="exam-question">
+    <p>3. Discuss the concept of a process and explain process scheduling in modern operating systems.</p>
+    <textarea rows="5" cols="100"></textarea>
+    <button type="button" onclick="revealExamAnswer(3)">SUBMIT</button>
+    <div class="exam-answer" id="exam-answer-3">Answer: A process is a running program. Process scheduling determines the order in which multiple processes access CPU and other resources, ensuring fairness, efficiency, and avoiding conflicts.</div>
+  </div>
+
+  <div class="exam-question">
+    <p>4. Describe memory management in operating systems, including memory protection and virtual memory.</p>
+    <textarea rows="5" cols="100"></textarea>
+    <button type="button" onclick="revealExamAnswer(4)">SUBMIT</button>
+    <div class="exam-answer" id="exam-answer-4">Answer: Memory management allocates memory to processes efficiently. Memory protection prevents one process from accessing another's memory. Virtual memory allows a computer to use disk space as an extension of RAM, supporting larger programs.</div>
+  </div>
+
+  <div class="exam-question">
+    <p>5. Explain the roles of device management and file management in operating systems.</p>
+    <textarea rows="5" cols="100"></textarea>
+    <button type="button" onclick="revealExamAnswer(5)">SUBMIT</button>
+    <div class="exam-answer" id="exam-answer-5">Answer: Device management installs drivers and controls device usage. File management provides naming conventions, directory structures, and access control to store, organize, and retrieve files.</div>
+  </div>
+
+  <div class="exam-question">
+    <p>6. Discuss the importance of security management and error detection in an OS.</p>
+    <textarea rows="5" cols="100"></textarea>
+    <button type="button" onclick="revealExamAnswer(6)">SUBMIT</button>
+    <div class="exam-answer" id="exam-answer-6">Answer: Security management prevents intrusion, ensures privacy, and provides recovery from data loss. Error detection allows the OS to handle program or device errors and shut down safely if needed.</div>
+  </div>
+
+  <div class="exam-question">
+    <p>7. Explain what utility software is and describe the functions of disk formatter, defragmenter, and backup utilities.</p>
+    <textarea rows="5" cols="100"></textarea>
+    <button type="button" onclick="revealExamAnswer(7)">SUBMIT</button>
+    <div class="exam-answer" id="exam-answer-7">Answer: Utility software performs maintenance tasks. Disk formatter sets up the file system, defragmenter reorganizes fragmented files, and backup software copies data for recovery.</div>
+  </div>
+
+  <div class="exam-question">
+    <p>8. Describe the concept of program libraries and the advantages of using DLLs.</p>
+    <textarea rows="5" cols="100"></textarea>
+    <button type="button" onclick="revealExamAnswer(8)">SUBMIT</button>
+    <div class="exam-answer" id="exam-answer-8">Answer: Program libraries are collections of reusable subroutines. DLLs allow multiple programs to share routines, saving storage and memory, and enable automatic updates of routines.</div>
+  </div>
+
+  <div class="exam-question">
+    <p>9. Explain the difference between compilers and interpreters and their advantages for programmers.</p>
+    <textarea rows="5" cols="100"></textarea>
+    <button type="button" onclick="revealExamAnswer(9)">SUBMIT</button>
+    <div class="exam-answer" id="exam-answer-9">Answer: Interpreters execute code line by line, helping detect errors during development. Compilers translate entire code to object code, providing faster execution and enabling distribution without exposing source code.</div>
+  </div>
+
+  <div class="exam-question">
+    <p>10. Explain how Java achieves platform independence using the Java Virtual Machine (JVM).</p>
+    <textarea rows="5" cols="100"></textarea>
+    <button type="button" onclick="revealExamAnswer(10)">SUBMIT</button>
+    <div class="exam-answer" id="exam-answer-10">Answer: Java compiles programs into bytecode, which is interpreted by the JVM on any platform. This allows the same Java program to run on different hardware and OS without modification.</div>
+  </div>
+
+  <div class="exam-question">
+    <p>11. Describe the features found in an Integrated Development Environment (IDE) that assist programmers.</p>
+    <textarea rows="5" cols="100"></textarea>
+    <button type="button" onclick="revealExamAnswer(11)">SUBMIT</button>
+    <div class="exam-answer" id="exam-answer-11">Answer: IDE features include prettyprinting, context-sensitive prompts, dynamic syntax checks, code collapsing, and debugging tools, all helping programmers write and correct code efficiently.</div>
+  </div>
+
+  <div class="exam-question">
+    <p>12. Explain the process of debugging using breakpoints in an IDE.</p>
+    <textarea rows="5" cols="100"></textarea>
+    <button type="button" onclick="revealExamAnswer(12)">SUBMIT</button>
+    <div class="exam-answer" id="exam-answer-12">Answer: Breakpoints pause program execution at a selected point, allowing step-by-step execution to examine variable values and program flow, making it easier to find and correct errors.</div>
+  </div>
+
+  <div class="exam-question">
+    <p>13. Discuss why file compression utilities are useful in operating systems.</p>
+    <textarea rows="5" cols="100"></textarea>
+    <button type="button" onclick="revealExamAnswer(13)">SUBMIT</button>
+    <div class="exam-answer" id="exam-answer-13">Answer: File compression reduces storage space requirements and makes file transfer faster, especially useful when sending files over the internet.</div>
+  </div>
+
+  <div class="exam-question">
+    <p>14. Explain the importance of virus checkers and the need for regular updates.</p>
+    <textarea rows="5" cols="100"></textarea>
+    <button type="button" onclick="revealExamAnswer(14)">SUBMIT</button>
+    <div class="exam-answer" id="exam-answer-14">Answer: Virus checkers prevent malware infections. Regular updates are needed to detect new viruses, as there is a delay between virus emergence and definition updates.</div>
+  </div>
+
+  <div class="exam-question">
+    <p>15. Explain why operating system tasks can be categorized as assisting users vs running the system.</p>
+    <textarea rows="5" cols="100"></textarea>
+    <button type="button" onclick="revealExamAnswer(15)">SUBMIT</button>
+    <div class="exam-answer" id="exam-answer-15">Answer: User-assisting tasks provide interfaces and utilities for user convenience, while system-running tasks manage hardware, processes, memory, and files to ensure smooth operation.</div>
+  </div>
+
+  <script>
+    function revealExamAnswer(num) {
+      document.getElementById('exam-answer-' + num).style.display = 'block';
+    }
+  </script>
+
+  <p><strong>Prepared by Ravi Raju</strong></p>
+</body>
+</html>

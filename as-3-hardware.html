@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AS Level Computer Science - Chapter 3: Hardware</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 18px; line-height: 1.6; color: #111; background:#fafafa; }
+    header, footer { text-align: center; margin: 18px 0; }
+    h1 { margin: 6px 0; }
+    h2 { color: #003366; margin: 6px 0 14px; border-bottom:2px solid #ccc; padding-bottom:4px;}
+    h3 { color:#00559a; margin-top:18px;}
+    .section { margin: 18px 0; padding: 12px; border: 1px solid #ddd; border-radius: 6px; background:#fff; }
+    .example, .discussion, .examtip {
+      padding: 10px; margin: 10px 0; border-radius: 6px; }
+    .example { background:#e8f2ff; border-left:5px solid #3399ff; }
+    .discussion { background:#e6ffe6; border-left:5px solid #33cc33; }
+    .examtip { background:#fff3e0; border-left:5px solid #ff9900; }
+    .diagram { background:#f9f9f9; border:1px dashed #aaa; padding:10px; margin:10px 0; text-align:center; font-style:italic; }
+    table { width:100%; border-collapse: collapse; margin: 12px 0;}
+    th, td { border:1px solid #ccc; padding:8px; text-align:left;}
+    th { background:#003366; color:#fff;}
+    .question { margin-top:8px; font-weight:bold; }
+    a { color:#003366; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AS Level Computer Science (9618)</h1>
+    <h2>Chapter 3: Hardware</h2>
+    <p><em>Prepared by Ravi Raju</em></p>
+  </header>
+
+  <main>
+    <p>This chapter covers hardware components of computer systems, including storage, input and output devices, memory components, and embedded systems. Understanding these is essential for analysing computer architecture and system design.</p>
+
+    <!-- 3.01 Overview of hardware -->
+    <section class="section">
+      <h3>3.01 Overview of Computer System Hardware Functionality</h3>
+      <p>A computer system supports three major operational areas:</p>
+      <ul>
+        <li>Processing of data (carried out by the CPU – discussed in Chapter 5)</li>
+        <li>Storage of data (primary and secondary storage)</li>
+        <li>Input and output of data (I/O subsystem)</li>
+      </ul>
+
+      <div class="diagram">[Diagram Placeholder: Memory Hierarchy with Registers, Cache, Main Memory, Secondary Storage]</div>
+
+      <p>Registers are fastest but smallest, cache is faster than RAM, and main memory is larger but slower. Secondary storage provides long-term data storage.</p>
+
+      <div class="examtip"><strong>Exam Tip:</strong> Always relate speed, cost, and capacity when comparing memory types.</div>
+
+      <p class="question">Question: Why do computer systems use both primary and secondary storage?</p>
+    </section>
+
+    <!-- 3.02 Embedded systems -->
+    <section class="section">
+      <h3>3.02 Embedded Systems</h3>
+      <p>An embedded system is a special-purpose computer within a larger device, often built on a <strong>microcontroller</strong> (processor + memory + I/O on one chip).</p>
+      <p>Examples: household appliances, cars, smartphones, industrial machines.</p>
+      <p>Advantages: mass production lowers costs, designed for single function, efficient use of resources. Risks: limited programmability, security concerns when connected to IoT.</p>
+
+      <div class="discussion"><strong>Discussion Point:</strong> How might useful information from an embedded system in a washing machine be communicated to its owner via the internet?</div>
+    </section>
+
+    <!-- 3.03 Memory components -->
+    <section class="section">
+      <h3>3.03 Memory Components</h3>
+      <h4>RAM (Random Access Memory)</h4>
+      <ul>
+        <li><strong>Volatile:</strong> data lost when power is off.</li>
+        <li><strong>Dynamic RAM (DRAM):</strong> cheaper, higher capacity, slower (needs refreshing).</li>
+        <li><strong>Static RAM (SRAM):</strong> faster, more expensive, used in cache.</li>
+      </ul>
+
+      <h4>ROM (Read-Only Memory)</h4>
+      <ul>
+        <li><strong>Non-volatile:</strong> retains data when power is off.</li>
+        <li>Stores <strong>bootstrap program</strong> and firmware.</li>
+        <li>Types: ROM, PROM, EPROM, EEPROM.</li>
+      </ul>
+
+      <div class="diagram">[Diagram Placeholder: DRAM vs SRAM vs ROM characteristics]</div>
+
+      <h4>Buffers</h4>
+      <p>Used to manage data transfer between devices with different speeds. Acts as a queue to smooth data flow.</p>
+      <p class="question">Question 3.01: Give examples of where a buffer is necessary in a computer system.</p>
+    </section>
+
+    <!-- 3.04 Secondary storage -->
+    <section class="section">
+      <h3>3.04 Secondary Storage Devices</h3>
+      <p>Storage media categories:</p>
+      <ul>
+        <li><strong>Magnetic media:</strong> Hard disks, magnetic tapes (long-term backup).</li>
+        <li><strong>Optical media:</strong> CDs, DVDs, Blu-ray (laser technology).</li>
+        <li><strong>Solid-state media:</strong> Flash memory (USB sticks, SSDs).</li>
+      </ul>
+
+      <table>
+        <tr><th>Medium</th><th>Advantages</th><th>Disadvantages</th></tr>
+        <tr><td>Magnetic</td><td>Cheap, large capacity</td><td>Slower, mechanical wear</td></tr>
+        <tr><td>Optical</td><td>Portable, cheap per disc</td><td>Limited capacity, slower</td></tr>
+        <tr><td>Solid-state</td><td>Fast, durable, portable</td><td>Expensive per GB</td></tr>
+      </table>
+
+      <div class="examtip"><strong>Exam Tip:</strong> Know the difference between <em>drive</em> (hardware) and <em>device driver</em> (software).</div>
+    </section>
+
+    <!-- 3.05 Output devices -->
+    <section class="section">
+      <h3>3.05 Output Devices</h3>
+      <ul>
+        <li><strong>Screens:</strong> CRT, LCD, LED, OLED, VR headsets.</li>
+        <li><strong>Printers:</strong> Inkjet, Laser (high-quality hardcopy).</li>
+        <li><strong>Plotters:</strong> For vector graphics, technical drawings.</li>
+        <li><strong>3D Printers:</strong> Additive manufacturing.</li>
+        <li><strong>Speakers:</strong> Audio output.</li>
+      </ul>
+
+      <div class="diagram">[Diagram Placeholder: Components of LCD and Laser Printer Process]</div>
+      <p class="question">Question: Compare advantages of laser printers over inkjet printers in terms of speed and cost.</p>
+    </section>
+
+    <!-- 3.06 Input devices -->
+    <section class="section">
+      <h3>3.06 Input Devices</h3>
+      <ul>
+        <li>Keyboards and keypads</li>
+        <li>Pointing devices (mouse, trackpad, touchscreen)</li>
+        <li>Game controllers</li>
+        <li>Scanners and webcams</li>
+        <li>Microphones (with voice recognition)</li>
+        <li>Reading from storage devices</li>
+        <li>Transmission via network link</li>
+      </ul>
+
+      <div class="discussion"><strong>Discussion Point:</strong> Investigate which touch screen technology (resistive or capacitive) is used in your phone or laptop and discuss its advantages.</div>
+    </section>
+
+    <!-- 3.07 Input/output of sound -->
+    <section class="section">
+      <h3>3.07 Input and Output of Sound</h3>
+      <p>Sound input requires a <strong>microphone</strong> (converts sound to electrical signal → ADC → digital).  
+      Sound output requires a <strong>speaker</strong> (digital → DAC → electrical → sound).</p>
+      <p>Applications: IP telephony, video conferencing, voice recognition, voice synthesis, music recording/playback.</p>
+      <div class="diagram">[Diagram Placeholder: ADC and DAC conversion for sound I/O]</div>
+    </section>
+
+    <p style="margin-top:14px;"><a href="as-3-assessment.html">➡ Go to Chapter 3 Assessment</a></p>
+    <p style="margin-top:8px;"><a href="index.html">⬅ Back to Index</a></p>
+  </main>
+
+  <footer>
+    <p>© 2025 Ravi Raju - AS Level Computer Science</p>
+  </footer>
+</body>
+</html>

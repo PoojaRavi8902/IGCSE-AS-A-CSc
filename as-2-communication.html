@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AS Level Computer Science - Chapter 2: Data Transmission</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 18px; line-height: 1.6; color: #111; background:#fafafa; }
+    header, footer { text-align: center; margin: 18px 0; }
+    h1 { margin: 6px 0; }
+    h2 { color: #003366; margin: 6px 0 14px; border-bottom:2px solid #ccc; padding-bottom:4px;}
+    h3 { color:#00559a; margin-top:18px;}
+    .section { margin: 18px 0; padding: 12px; border: 1px solid #ddd; border-radius: 6px; background:#fff; }
+    .example, .discussion, .examtip {
+      padding: 10px; margin: 10px 0; border-radius: 6px; }
+    .example { background:#e8f2ff; border-left:5px solid #3399ff; }
+    .discussion { background:#e6ffe6; border-left:5px solid #33cc33; }
+    .examtip { background:#fff3e0; border-left:5px solid #ff9900; }
+    .diagram { background:#f9f9f9; border:1px dashed #aaa; padding:10px; margin:10px 0; text-align:center; font-style:italic; }
+    table { width:100%; border-collapse: collapse; margin: 12px 0;}
+    th, td { border:1px solid #ccc; padding:8px; text-align:left;}
+    th { background:#003366; color:#fff;}
+    .question { margin-top:8px; font-weight:bold; }
+    a { color:#003366; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AS Level Computer Science (9618)</h1>
+    <h2>Chapter 2: Data Transmission</h2>
+    <p><em>Prepared by Ravi Raju</em></p>
+  </header>
+
+  <main>
+    <p>This chapter covers the methods and principles of transmitting data between computers and devices. You will study transmission types, error detection, and encryption. Mastery of these topics is essential for exam success.</p>
+
+    <!-- 2.01 Types of Data Transmission -->
+    <section class="section">
+      <h3>2.01 Types of Data Transmission</h3>
+      <p>Data transmission refers to how data moves from one device to another. It can be categorized in two main ways:</p>
+      <ul>
+        <li><strong>Serial Transmission:</strong> Bits are sent one after another over a single channel.</li>
+        <li><strong>Parallel Transmission:</strong> Multiple bits are sent simultaneously across multiple channels.</li>
+      </ul>
+
+      <div class="diagram">[Diagram Placeholder: Serial vs Parallel Transmission]</div>
+
+      <table>
+        <tr><th>Feature</th><th>Serial</th><th>Parallel</th></tr>
+        <tr><td>Speed</td><td>Slower (one bit at a time)</td><td>Faster (many bits at once)</td></tr>
+        <tr><td>Distance</td><td>Reliable over long distances</td><td>Errors increase with distance</td></tr>
+        <tr><td>Cost</td><td>Cheaper (fewer wires)</td><td>More expensive (more wires)</td></tr>
+        <tr><td>Example</td><td>USB</td><td>Internal computer buses</td></tr>
+      </table>
+
+      <div class="examtip"><strong>Exam Tip:</strong> Always compare serial and parallel transmission in terms of distance, speed, and reliability.</div>
+      <p class="question">Question: Why is serial transmission more reliable than parallel for long-distance communication?</p>
+    </section>
+
+    <!-- 2.02 Direction of Data Transmission -->
+    <section class="section">
+      <h3>2.02 Direction of Data Transmission</h3>
+      <p>Communication channels may allow one-way or two-way data flow:</p>
+      <ul>
+        <li><strong>Simplex:</strong> Data flows in one direction only (e.g., keyboard to computer).</li>
+        <li><strong>Half-Duplex:</strong> Data flows both ways, but only one direction at a time (e.g., walkie-talkies).</li>
+        <li><strong>Full-Duplex:</strong> Data flows in both directions simultaneously (e.g., telephone).</li>
+      </ul>
+
+      <div class="diagram">[Diagram Placeholder: Simplex vs Half-Duplex vs Full-Duplex]</div>
+
+      <div class="discussion"><strong>Discussion Point:</strong> Identify modern technologies that use full-duplex transmission and explain why it is necessary.</div>
+    </section>
+
+    <!-- 2.03 Synchronisation -->
+    <section class="section">
+      <h3>2.03 Synchronisation</h3>
+      <p>For data transmission to be successful, the sender and receiver must be synchronized:</p>
+      <ul>
+        <li><strong>Synchronous:</strong> Data is sent with a clock signal to keep sender and receiver aligned. Efficient for continuous streams.</li>
+        <li><strong>Asynchronous:</strong> Data is sent one byte at a time with start and stop bits. Useful for irregular data transfer.</li>
+      </ul>
+
+      <div class="diagram">[Diagram Placeholder: Asynchronous Frame with Start/Stop Bits]</div>
+
+      <p class="question">Question: Why are start and stop bits needed in asynchronous transmission?</p>
+    </section>
+
+    <!-- 2.04 Transmission Errors -->
+    <section class="section">
+      <h3>2.04 Transmission Errors</h3>
+      <p>Errors occur when bits are corrupted during transmission due to noise or interference.</p>
+      <p>Common methods to detect and correct errors include:</p>
+      <ul>
+        <li><strong>Parity Checking:</strong> Adding a parity bit (odd or even) to detect errors.</li>
+        <li><strong>Checksums:</strong> Blocks of data summed and compared at the receiver.</li>
+        <li><strong>Cyclic Redundancy Check (CRC):</strong> Uses polynomial division to detect errors with high accuracy.</li>
+      </ul>
+
+      <div class="example"><strong>Worked Example:</strong> If the parity scheme is odd, and the data is 1010001, the parity bit should be 0 (making total 5 ones, odd).</div>
+    </section>
+
+    <!-- 2.05 Automatic Repeat Requests (ARQ) -->
+    <section class="section">
+      <h3>2.05 Automatic Repeat Requests (ARQ)</h3>
+      <p>ARQ is a protocol for ensuring reliable transmission:</p>
+      <ul>
+        <li><strong>Acknowledgement (ACK):</strong> Receiver confirms receipt.</li>
+        <li><strong>Timeout:</strong> If no ACK is received in time, sender retransmits.</li>
+        <li><strong>Negative Acknowledgement (NAK):</strong> Receiver signals error, prompting retransmission.</li>
+      </ul>
+      <div class="diagram">[Diagram Placeholder: ARQ Process]</div>
+    </section>
+
+    <!-- 2.06 Transmission Mediums -->
+    <section class="section">
+      <h3>2.06 Transmission Mediums</h3>
+      <p>Data can be transmitted through various mediums:</p>
+      <ul>
+        <li><strong>Copper Cable (Twisted Pair, Coaxial):</strong> Cheap, but susceptible to interference.</li>
+        <li><strong>Optical Fibre:</strong> High bandwidth, secure, immune to interference.</li>
+        <li><strong>Wireless:</strong> Uses radio/microwave, convenient but less secure.</li>
+      </ul>
+      <table>
+        <tr><th>Medium</th><th>Advantages</th><th>Disadvantages</th></tr>
+        <tr><td>Copper</td><td>Cheap, easy to install</td><td>Low bandwidth, interference</td></tr>
+        <tr><td>Fibre Optic</td><td>High speed, secure</td><td>Expensive, fragile</td></tr>
+        <tr><td>Wireless</td><td>Mobile, convenient</td><td>Less secure, weather interference</td></tr>
+      </table>
+    </section>
+
+    <!-- 2.07 Packet Switching -->
+    <section class="section">
+      <h3>2.07 Packet Switching</h3>
+      <p>Data is split into packets before transmission. Each packet contains:</p>
+      <ul>
+        <li><strong>Header:</strong> Source, destination, sequence number, and error detection info.</li>
+        <li><strong>Payload:</strong> Actual data being transmitted.</li>
+      </ul>
+      <div class="diagram">[Diagram Placeholder: Structure of a Data Packet]</div>
+      <div class="discussion"><strong>Discussion Point:</strong> Why is packet switching more efficient than circuit switching for internet communication?</div>
+    </section>
+
+    <!-- 2.08 Encryption -->
+    <section class="section">
+      <h3>2.08 Encryption</h3>
+      <p>Encryption secures data by transforming it into ciphertext:</p>
+      <ul>
+        <li><strong>Symmetric Encryption:</strong> Same key is used for both encryption and decryption. (e.g., AES)</li>
+        <li><strong>Asymmetric Encryption:</strong> Public key encrypts, private key decrypts. (e.g., RSA)</li>
+      </ul>
+      <div class="diagram">[Diagram Placeholder: Public vs Private Key Encryption]</div>
+      <div class="examtip"><strong>Exam Tip:</strong> Be prepared to compare symmetric and asymmetric encryption in terms of speed, key distribution, and use cases.</div>
+    </section>
+
+    <!-- 2.09 Real-World Application -->
+    <section class="section">
+      <h3>2.09 Real-World Application</h3>
+      <p>Data transmission concepts are applied in:</p>
+      <ul>
+        <li>Secure online banking (encryption + ARQ)</li>
+        <li>Streaming services (packet switching, error detection)</li>
+        <li>Telecommunications (fibre optic and wireless systems)</li>
+      </ul>
+      <div class="question">Question: How do modern streaming services balance error correction and speed?</div>
+    </section>
+
+    <p style="margin-top:14px;"><a href="as-2-assessment.html">➡ Go to Chapter 2 Assessment</a></p>
+    <p style="margin-top:8px;"><a href="index.html">⬅ Back to Index</a></p>
+  </main>
+
+  <footer>
+    <p>© 2025 Ravi Raju - AS Level Computer Science</p>
+  </footer>
+</body>
+</html>

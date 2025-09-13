@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>AS Level Computer Science - Chapter 3 Assessment</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    :root{
+      --accent:#007a78;
+      --accent-dark:#005a57;
+      --panel:#ffffff;
+      --muted:#f7fffe;
+    }
+    body { font-family: Arial, Helvetica, sans-serif; margin:18px; background:#fbfdfc; color:#111; line-height:1.5; }
+    header { text-align:center; margin-bottom:14px; }
+    h1 { color:var(--accent-dark); margin:6px 0; }
+    h2 { color:var(--accent); margin:0 0 8px; }
+    .credit { font-style:italic; color:#333; margin-bottom:12px; }
+    .note { color:#333; font-size:0.95em; margin-bottom:12px; }
+    .section { background:var(--panel); border:1px solid rgba(0,0,0,0.06); border-left:6px solid var(--accent); padding:14px; border-radius:8px; margin-bottom:18px;}
+    ol { padding-left:18px; }
+    .mcq-options label { display:block; margin:6px 0; cursor:pointer; }
+    .btn { display:inline-block; background:var(--accent); color:#fff; padding:10px 14px; border-radius:6px; border:none; font-size:15px; cursor:pointer; }
+    .btn:disabled { opacity:0.55; cursor:default; }
+    .result { margin-top:10px; font-weight:700; }
+    .answer { display:none; margin-top:8px; padding:10px; background:#f0fffb; border-left:4px solid var(--accent-dark); border-radius:4px; white-space:pre-wrap; }
+    textarea { width:100%; min-height:120px; padding:8px; margin-top:8px; font-family:inherit; font-size:14px; }
+    .meta { font-size:0.95em; color:#444; margin-top:6px; }
+    a { color:var(--accent-dark); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .two-col { display:grid; grid-template-columns:1fr; gap:12px; }
+    @media(min-width:920px){ .two-col{ grid-template-columns:1fr 1fr; } }
+    .small { font-size:0.95em; color:#333; }
+    .qnum { font-weight:700; margin-right:6px;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AS Level Computer Science (9618)</h1>
+    <h2>Chapter 3 — Hardware: Assessment</h2>
+    <p class="credit">Prepared by Ravi Raju</p>
+    <p class="note">Instructions: complete all parts. Click each part's <strong>Submit</strong> once. MCQs are auto-marked; Short and Exam model answers are revealed on submit. There is <strong>no reset</strong>.</p>
+  </header>
+
+  <!-- PART A: MCQs -->
+  <section class="section" id="partA">
+    <h2>Part A — Multiple Choice Questions (15)</h2>
+    <p class="meta">Auto-graded. Choose the single best answer for each question. Results appear after you press <em>Submit MCQs</em>.</p>
+
+    <form id="mcqForm">
+      <ol>
+        <li>
+          <span class="qnum">1.</span> Which component is usually fastest but smallest in capacity?
+          <div class="mcq-options">
+            <label><input type="radio" name="q1" value="a"> Hard disk</label>
+            <label><input type="radio" name="q1" value="b"> Cache register</label>
+            <label><input type="radio" name="q1" value="c"> Main memory</label>
+            <label><input type="radio" name="q1" value="d"> Optical disc</label>
+          </div>
+        </li>
+
+        <li>
+          <span class="qnum">2.</span> Which of the following is volatile memory?
+          <div class="mcq-options">
+            <label><input type="radio" name="q2" value="a"> ROM</label>
+            <label><input type="radio" name="q2" value="b"> SSD (flash)</label>
+            <label><input type="radio" name="q2" value="c"> DRAM</label>
+            <label><input type="radio" name="q2" value="d"> Optical disc</label>
+          </div>
+        </li>
+
+        <li>
+          <span class="qnum">3.</span> Which memory type is typically used for CPU cache?
+          <div class="mcq-options">
+            <label><input type="radio" name="q3" value="a"> DRAM</label>
+            <label><input type="radio" name="q3" value="b"> SRAM</label>
+            <label><input type="radio" name="q3" value="c"> EEPROM</label>
+            <label><input type="radio" name="q3" value="d"> Magnetic tape</label>
+          </div>
+        </li>
+
+        <li>
+          <span class="qnum">4.</span> Which ROM type can be erased electrically while in-circuit?
+          <div class="mcq-options">
+            <label><input type="radio" name="q4" value="a"> Mask ROM</label>
+            <label><input type="radio" name="q4" value="b"> PROM</label>
+            <label><input type="radio" name="q4" value="c"> EPROM (UV erase)</label>
+            <label><input type="radio" name="q4" value="d"> EEPROM</label>
+          </div>
+        </li>
+
+        <li>
+          <span class="qnum">5.</span> Which storage medium uses pits and lands read by a laser?
+          <div class="mcq-options">
+            <label><input type="radio" name="q5" value="a"> Hard disk</label>
+            <label><input type="radio" name="q5" value="b"> SSD</label>
+            <label><input type="radio" name="q5" value="c"> Optical disc (CD/DVD/Blu-ray)</label>
+            <label><input type="radio" name="q5" value="d"> Magnetic tape</label>
+          </div>
+        </li>
+
+        <li>
+          <span class="qnum">6.</span> Which property best describes solid-state drives compared to hard disks?
+          <div class="mcq-options">
+            <label><input type="radio" name="q6" value="a"> Moving heads for read/write</label>
+            <label><input type="radio" name="q6" value="b"> Higher latency and lower throughput</label>
+            <label><input type="radio" name="q6" value="c"> Faster random access and no moving parts</label>
+            <label><input type="radio" name="q6" value="d"> Uses pits and lands</label>
+          </div>
+        </li>
+
+        <li>
+          <span class="qnum">7.</span> Which device needs buffering when outputting a continuous high-rate audio stream to a slower disk?
+          <div class="mcq-options">
+            <label><input type="radio" name="q7" value="a"> Keyboard</label>
+            <label><input type="radio" name="q7" value="b"> Microphone/Audio capture</label>
+            <label><input type="radio" name="q7" value="c"> Optical mouse</label>
+            <label><input type="radio" name="q7" value="d"> Barcode scanner</label>
+          </div>
+        </li>
+
+        <li>
+          <span class="qnum">8.</span> Which printer technology forms images using toner fused to paper?
+          <div class="mcq-options">
+            <label><input type="radio" name="q8" value="a"> Inkjet</label>
+            <label><input type="radio" name="q8" value="b"> Laser</label>
+            <label><input type="radio" name="q8" value="c"> Plotter (pen)</label>
+            <label><input type="radio" name="q8" value="d"> Thermal transfer</label>
+          </div>
+        </li>
+
+        <li>
+          <span class="qnum">9.</span> In optical discs, why do Blu-ray discs hold more data than DVDs?
+          <div class="mcq-options">
+            <label><input type="radio" name="q9" value="a"> Faster platter rotation</label>
+            <label><input type="radio" name="q9" value="b"> Shorter laser wavelength allowing smaller pits</label>
+            <label><input type="radio" name="q9" value="c"> Different material encoding magnetic domains</label>
+            <label><input type="radio" name="q9" value="d"> Multiple read-write heads</label>
+          </div>
+        </li>
+
+        <li>
+          <span class="qnum">10.</span> Which touch screen technology detects changes in capacitance and supports multi-touch?
+          <div class="mcq-options">
+            <label><input type="radio" name="q10" value="a"> Resistive</label>
+            <label><input type="radio" name="q10" value="b"> Infrared grid</label>
+            <label><input type="radio" name="q10" value="c"> Capacitive (projected capacitive)</label>
+            <label><input type="radio" name="q10" value="d"> Surface acoustic wave</label>
+          </div>
+        </li>
+
+        <li>
+          <span class="qnum">11.</span> Which device would commonly be described as embedded?
+          <div class="mcq-options">
+            <label><input type="radio" name="q11" value="a"> Desktop PC</label>
+            <label><input type="radio" name="q11" value="b"> Washing machine controller</label>
+            <label><input type="radio" name="q11" value="c"> High-performance GPU</label>
+            <label><input type="radio" name="q11" value="d"> Network switch</label>
+          </div>
+        </li>
+
+        <li>
+          <span class="qnum">12.</span> What is the primary reason for wear-leveling in flash storage?
+          <div class="mcq-options">
+            <label><input type="radio" name="q12" value="a"> To improve read speed by caching</label>
+            <label><input type="radio" name="q12" value="b"> To ensure even use of blocks to extend device lifespan</label>
+            <label><input type="radio" name="q12" value="c"> To encrypt data at rest</label>
+            <label><input type="radio" name="q12" value="d"> To partition the drive for OS and data</label>
+          </div>
+        </li>
+
+        <li>
+          <span class="qnum">13.</span> Which of these is the correct description of a buffer?
+          <div class="mcq-options">
+            <label><input type="radio" name="q13" value="a"> Permanent long-term storage area</label>
+            <label><input type="radio" name="q13" value="b"> Temporary area to smooth differences in data rates</label>
+            <label><input type="radio" name="q13" value="c"> A device driver</label>
+            <label><input type="radio" name="q13" value="d"> A read-only region of ROM</label>
+          </div>
+        </li>
+
+        <li>
+          <span class="qnum">14.</span> Which storage unit is described as direct-access and read–write?
+          <div class="mcq-options">
+            <label><input type="radio" name="q14" value="a"> Magnetic tape</label>
+            <label><input type="radio" name="q14" value="b"> Optical disc sequential track only</label>
+            <label><input type="radio" name="q14" value="c"> Hard disk drive (HDD)</label>
+            <label><input type="radio" name="q14" value="d"> ROM chip</label>
+          </div>
+        </li>
+
+        <li>
+          <span class="qnum">15.</span> Which one best describes EEPROM?
+          <div class="mcq-options">
+            <label><input type="radio" name="q15" value="a"> Read-only and programmed during manufacture only</label>
+            <label><input type="radio" name="q15" value="b"> Electrically erasable programmable read-only memory changeable while in-circuit</label>
+            <label><input type="radio" name="q15" value="c"> Erasable only with ultraviolet light</label>
+            <label><input type="radio" name="q15" value="d"> A form of DRAM requiring refresh</label>
+          </div>
+        </li>
+      </ol>
+
+      <div style="margin-top:12px;">
+        <button type="button" class="btn" id="mcqSubmit">Submit MCQs</button>
+        <div id="mcqResult" class="result" aria-live="polite"></div>
+      </div>
+    </form>
+  </section>
+
+  <!-- PART B: Short Questions -->
+  <section class="section" id="partB">
+    <h2>Part B — Short Questions (15)</h2>
+    <p class="meta">Write brief answers. Model answers are hidden and will be revealed when you press <strong>Submit Short Answers</strong>.</p>
+
+    <ol>
+      <li class="sq">1. Explain the difference between primary (main) memory and secondary storage.
+        <div class="answer" id="s1">Model answer: Primary memory (RAM) is fast, volatile, and directly accessible by the CPU for immediate processing; secondary storage (HDD/SSD/optical) is non-volatile, larger capacity, and used for long-term storage and file systems.</div>
+      </li>
+
+      <li class="sq">2. Give two advantages and one disadvantage of SSDs compared with HDDs.
+        <div class="answer" id="s2">Model answer: Advantages: faster random access and no moving parts (more shock-resistant); lower latency and often better durability. Disadvantage: higher cost per gigabyte and finite program/erase cycles leading to wear.</div>
+      </li>
+
+      <li class="sq">3. What is a device driver?
+        <div class="answer" id="s3">Model answer: Software that allows the operating system to communicate with and control a hardware device; it translates OS requests into device-specific commands and handles I/O protocols.</div>
+      </li>
+
+      <li class="sq">4. Describe the role of the read–write head in a hard disk drive.
+        <div class="answer" id="s4">Model answer: The read–write head detects magnetic states on platters (reading) and changes magnetisation when writing; heads are positioned by actuators to access specific tracks/sectors.</div>
+      </li>
+
+      <li class="sq">5. Why do DRAM cells need refreshing and SRAM cells do not?
+        <div class="answer" id="s5">Model answer: DRAM stores bits as charge on capacitors which leak and must be periodically refreshed; SRAM stores bits in flip-flop circuits that maintain their state as long as power is supplied.</div>
+      </li>
+
+      <li class="sq">6. Explain the difference between PROM and EPROM.
+        <div class="answer" id="s6">Model answer: PROM can be programmed once after manufacture (fuses blown) and cannot be erased. EPROM can be erased (with ultraviolet light) and reprogrammed, but typically must be removed from circuit for erasure.</div>
+      </li>
+
+      <li class="sq">7. What is wear-leveling in flash memory and why is it necessary?
+        <div class="answer" id="s7">Model answer: Wear-leveling spreads write/erase cycles across flash blocks to avoid excessive use of particular blocks, extending the usable lifetime of the device.</div>
+      </li>
+
+      <li class="sq">8. List three uses of buffers in a computer system.
+        <div class="answer" id="s8">Model answer: Smoothing disk writes from high-rate audio capture, holding network packets awaiting processing, and smoothing printer output so the CPU can continue while printer prints.</div>
+      </li>
+
+      <li class="sq">9. Summarise how an optical disc stores and reads binary data.
+        <div class="answer" id="s9">Model answer: Data is encoded as pits and lands on a spiral track; a laser reads differences in reflected light intensity (pit vs land) which are interpreted as binary values; during writing (rewritable media) material phase changes control reflectivity.</div>
+      </li>
+
+      <li class="sq">10. Give one reason why embedded systems are often cheaper in mass production than general-purpose systems.
+        <div class="answer" id="s10">Model answer: Embedded systems are custom-designed for a single function and can be manufactured in large volumes, spreading fixed development costs and enabling low per-unit component selection optimized for cost.</div>
+      </li>
+
+      <li class="sq">11. Explain the purpose of a bootstrap program stored in ROM.
+        <div class="answer" id="s11">Model answer: The bootstrap (firmware) initializes hardware at power-up, performs POST (power-on self-test), and loads the OS bootloader from secondary storage into main memory to start the operating system.</div>
+      </li>
+
+      <li class="sq">12. What are tracks, sectors and cylinders on a hard disk?
+        <div class="answer" id="s12">Model answer: Tracks are concentric circles on a platter; sectors are subdivisions of tracks (smallest addressable unit); cylinders are aligned tracks across platters that share the same radius and can be accessed with a single head movement.</div>
+      </li>
+
+      <li class="sq">13. Why is capacitive touch preferred for multi-touch devices compared with resistive touch?
+        <div class="answer" id="s13">Model answer: Capacitive touch detects changes in capacitance and supports multi-touch and high sensitivity without requiring pressure; resistive typically detects single-point pressure and is less responsive to gestures.</div>
+      </li>
+
+      <li class="sq">14. State two differences between inkjet and laser printers.
+        <div class="answer" id="s14">Model answer: Inkjet sprays liquid ink droplets (good for photos, lower initial cost) but slower for large volumes; laser uses toner fused to paper (faster for text, lower cost per page for high volumes) and usually sharper text.</div>
+      </li>
+
+      <li class="sq">15. What is the role of an ADC in audio input?
+        <div class="answer" id="s15">Model answer: ADC (analogue-to-digital converter) samples the analogue electrical signal from a microphone at discrete times and quantises amplitude levels into binary numbers for digital storage and processing.</div>
+      </li>
+    </ol>
+
+    <div style="margin-top:12px;">
+      <button class="btn" id="shortSubmit">Submit Short Answers</button>
+    </div>
+  </section>
+
+  <!-- PART C: Exam-style -->
+  <section class="section" id="partC">
+    <h2>Part C — Exam-Style Questions (15)</h2>
+    <p class="meta">Answer in detail. Use the textareas. Model answers are hidden and will be revealed when you press <strong>Submit Exam Answers</strong>.</p>
+
+    <ol>
+      <li>
+        <strong>1.</strong> Explain the memory hierarchy (registers, cache, main memory, secondary storage) and why it exists. Discuss trade-offs in speed, cost and capacity.
+        <textarea id="e1"></textarea>
+        <div class="answer" id="m1">Model answer:
+The memory hierarchy orders storage by speed and cost: registers (inside CPU) are fastest and smallest, cache (SRAM) is next fastest for frequently used data, main memory (DRAM) provides larger volatile storage, and secondary storage (HDD/SSD) provides large non-volatile capacity. The hierarchy exists because very fast memory is expensive and cannot be large; slower memory is cheaper and larger. Trade-offs: higher speed costs more per byte; larger capacity often means higher latency. Designers balance these to provide fast access to hot data while keeping large datasets on cheaper slower media.</div>
+      </li>
+
+      <li>
+        <strong>2.</strong> Describe differences between DRAM and SRAM in construction, use cases and performance.
+        <textarea id="e2"></textarea>
+        <div class="answer" id="m2">Model answer:
+DRAM stores each bit as a capacitor that must be refreshed regularly; it has high density and is cheaper so used for main memory. SRAM uses bistable flip-flop circuits to store bits without refresh, offering much faster access times but lower density and higher cost; used for CPU cache. DRAM: slower, cheaper, needs refresh. SRAM: faster, expensive, used for small caches.</div>
+      </li>
+
+      <li>
+        <strong>3.</strong> Outline how a hard disk reads/writes data (platters, heads, tracks, sectors, actuator motion) and explain what causes fragmentation and why defragmentation helps (if applicable).
+        <textarea id="e3"></textarea>
+        <div class="answer" id="m3">Model answer:
+Hard disks have spinning platters with concentric tracks; read/write heads on actuator arms move radially to access tracks; data is stored in sectors. Writing files across non-contiguous sectors causes fragmentation (files split across different locations), increasing seek time for reads. Defragmentation reorganises file allocation to store file sectors contiguously, reducing head movement and improving performance. Note: SSDs do not benefit from defragmentation and can be harmed by excessive writes.</div>
+      </li>
+
+      <li>
+        <strong>4.</strong> Explain SSD internal organisation (blocks and pages) and why writing data sometimes requires erasing whole blocks first.
+        <textarea id="e4"></textarea>
+        <div class="answer" id="m4">Model answer:
+SSD flash memory is organised into pages (smallest read unit) grouped into blocks (erase unit). To overwrite a page, the block must first be erased (all pages set to 1), because flash cannot change bits from 0 to 1 without erasing. This leads SSD controllers to use techniques like wear-leveling and garbage collection to manage free pages and distribute writes, improving lifespan and performance.</div>
+      </li>
+
+      <li>
+        <strong>5.</strong> Compare optical, magnetic and solid-state storage technologies in terms of capacity, durability, speed and typical use-cases.
+        <textarea id="e5"></textarea>
+        <div class="answer" id="m5">Model answer:
+Magnetic (HDD): high capacity, mechanical parts (susceptible to shock), moderate speed — good for large local storage/backups. Optical (CD/DVD/Blu-ray): portable, low cost per disc, relatively slow, limited capacity — good for distribution/archival. Solid-state (SSD/flash): fast, durable (no moving parts), lower capacity per cost, wear limits — ideal for fast boot drives, mobile devices. Choice depends on performance, cost, portability and longevity needs.</div>
+      </li>
+
+      <li>
+        <strong>6.</strong> Describe how a laser printer creates an image on paper (summary of drum charging, laser exposure, toner transfer and fusing).
+        <textarea id="e6"></textarea>
+        <div class="answer" id="m6">Model answer:
+A laser printer charges a drum electrically. A laser beam scans the drum to discharge spots corresponding to the image, creating a latent electrostatic image. Charged toner adheres to discharged areas. Paper receives the toner when passed under the drum (toner transfer), and then heated rollers (fuser) melt and bind toner particles to the paper. Finally, the drum is cleaned and recharged for the next page.</div>
+      </li>
+
+      <li>
+        <strong>7.</strong> Explain why capacitive touch screens support multi-touch and resistive screens generally do not. Include brief notes on construction.
+        <textarea id="e7"></textarea>
+        <div class="answer" id="m7">Model answer:
+Capacitive screens have a grid of conductive electrodes; touching changes local capacitance at multiple points, allowing simultaneous multi-touch detection. Resistive screens have two conductive layers separated by a gap; touch causes the layers to touch at one point producing a single coordinate (pressure-based), so multi-touch is not naturally supported. Capacitive is more responsive and supports gestures; resistive works with stylus/gloved hands.</div>
+      </li>
+
+      <li>
+        <strong>8.</strong> Discuss the consequences of connecting many embedded devices to the internet (IoT) for security and upgradeability.
+        <textarea id="e8"></textarea>
+        <div class="answer" id="m8">Model answer:
+IoT increases attack surface; many embedded devices lack secure default configurations or timely patching, making them vulnerable. Consequences include data leakage, devices being co-opted into botnets, and privacy risks. Upgradeability is crucial: devices need secure update mechanisms (authenticated firmware updates) and lifecycle support. Manufacturers must plan secure provisioning, authentication and long-term patch support.</div>
+      </li>
+
+      <li>
+        <strong>9.</strong> Describe the ADC sampling process for sound input and explain the roles of sampling rate and bit depth on quality and file size.
+        <textarea id="e9"></textarea>
+        <div class="answer" id="m9">Model answer:
+An ADC samples the analog waveform at regular intervals (sampling rate) and quantises amplitude into discrete levels (bit depth). Higher sampling rate captures higher frequencies (Nyquist theorem: sample ≥2× highest frequency). Higher bit depth increases dynamic range and reduces quantisation noise. Both increase data rate/file size (samples per second × bits per sample).</div>
+      </li>
+
+      <li>
+        <strong>10.</strong> Explain what is meant by 'direct-access' as applied to storage devices, and give two examples of direct-access and one sequential-access device.
+        <textarea id="e10"></textarea>
+        <div class="answer" id="m10">Model answer:
+Direct-access means data can be read or written at arbitrary locations without reading intervening data (random access). Examples: HDD and SSD. Sequential-access device: magnetic tape, where data must be read in order to reach a particular location.</div>
+      </li>
+
+      <li>
+        <strong>11.</strong> A system designer must choose between a high-capacity HDD and a faster SSD for a server. List at least four factors they should consider and justify which workloads favour SSDs.
+        <textarea id="e11"></textarea>
+        <div class="answer" id="m11">Model answer:
+Consider cost per GB, performance (IOPS, latency), durability (write endurance), power consumption, and capacity needs. SSDs favour workloads with many small random I/O operations (databases, virtual machine images, boot drives) because of low latency and high IOPS. HDDs favour large sequential storage needs (archival, backups) where cost per GB matters more.</div>
+      </li>
+
+      <li>
+        <strong>12.</strong> Explain what a device driver must provide to the operating system and why driver updates are important.
+        <textarea id="e12"></textarea>
+        <div class="answer" id="m12">Model answer:
+A driver provides a software interface for the OS to control hardware, including initialization, I/O control, interrupts handling, and data transfer protocols. Updates fix bugs, improve performance, and patch security vulnerabilities; outdated drivers may cause instability or security risks.</div>
+      </li>
+
+      <li>
+        <strong>13.</strong> Explain how hard disk sector size and file system allocation unit (cluster) affect storage efficiency and fragmentation.
+        <textarea id="e13"></textarea>
+        <div class="answer" id="m13">Model answer:
+Sector is physical minimal unit; file system allocation unit (cluster) groups sectors for file storage. If cluster size is much larger than typical small files, internal fragmentation wastes space (slack). File fragmentation occurs when file clusters are non-contiguous, increasing seek time. Smaller clusters reduce slack but may increase metadata overhead.</div>
+      </li>
+
+      <li>
+        <strong>14.</strong> Describe a simple wear-leveling strategy and why garbage collection is necessary in NAND flash SSDs.
+        <textarea id="e14"></textarea>
+        <div class="answer" id="m14">Model answer:
+Simple wear-leveling rotates writes across blocks so that no single block is cycled excessively. Garbage collection reclaims blocks by copying still-valid pages elsewhere and erasing blocks to create free pages; necessary because flash cannot overwrite pages in-place and requires erasing whole blocks before writing, so GC ensures free space for future writes.</div>
+      </li>
+
+      <li>
+        <strong>15.</strong> Design a short test procedure to identify whether a given display panel is LCD or OLED (in student-lab style).
+        <textarea id="e15"></textarea>
+        <div class="answer" id="m15">Model answer:
+Check black level and viewing angle: OLED produces very deep blacks (pixels emit light individually) and wide angles without backlight bleed; LCD typically has backlight and blacks may appear grayish. Turn off backlight areas, observe response to rapid brightness changes (OLED typically has faster response). Also check power consumption patterns and presence/absence of backlight layer via device specs.</div>
+      </li>
+    </ol>
+
+    <div style="margin-top:12px;">
+      <button class="btn" id="examSubmit">Submit Exam Answers</button>
+    </div>
+  </section>
+
+  <p style="margin-top:14px;"><a href="as-3-hardware.html">&#8592; Back to Chapter 3 Notes</a></p>
+  <footer style="margin-top:18px; text-align:center;">
+    <p>© 2025 Ravi Raju - AS Level Computer Science</p>
+  </footer>
+
+  <script>
+    // MCQ answer key (q1..q15)
+    const mcqKey = {
+      q1:'b', q2:'c', q3:'b', q4:'d', q5:'c',
+      q6:'c', q7:'b', q8:'b', q9:'b', q10:'c',
+      q11:'b', q12:'b', q13:'b', q14:'c', q15:'b'
+    };
+
+    // MCQ submit handler
+    document.getElementById('mcqSubmit').addEventListener('click', function(){
+      const btn = this;
+      if (btn.disabled) return;
+      let total = 15, score = 0;
+      for (let i=1;i<=total;i++){
+        const sel = document.querySelector('input[name="q'+i+'"]:checked');
+        if (sel && sel.value === mcqKey['q'+i]) score++;
+      }
+      const percent = Math.round((score/total)*100);
+      let comment = percent >= 80 ? 'Excellent — strong knowledge.' :
+                    percent >= 60 ? 'Good — minor gaps.' :
+                    percent >= 40 ? 'Satisfactory — needs revision.' :
+                    'Weak — revisit chapter carefully.';
+      document.getElementById('mcqResult').textContent = `MCQ Score: ${score} / ${total} (${percent}%). ${comment}`;
+      // Lock MCQ inputs and button
+      btn.disabled = true;
+      const inputs = document.querySelectorAll('#mcqForm input[type=radio]');
+      inputs.forEach(i => i.disabled = true);
+    });
+
+    // Short answers reveal
+    document.getElementById('shortSubmit').addEventListener('click', function(){
+      const btn = this;
+      if (btn.disabled) return;
+      for (let i=1;i<=15;i++){
+        const el = document.getElementById('s'+i);
+        if (el) el.style.display = 'block';
+      }
+      btn.disabled = true;
+    });
+
+    // Exam answers reveal and lock textareas
+    document.getElementById('examSubmit').addEventListener('click', function(){
+      const btn = this;
+      if (btn.disabled) return;
+      for (let i=1;i<=15;i++){
+        const el = document.getElementById('m'+i);
+        if (el) el.style.display = 'block';
+        const ta = document.getElementById('e'+i);
+        if (ta) ta.disabled = false;
+      }
+      btn.disabled = true;
+      // scroll to top for teacher convenience
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Initially keep exam textareas editable (students write). Optionally could disable afterwards.
+    // Ensure answers are hidden initially (they already are via CSS .answer {display:none})
+  </script>
+</body>
+</html>

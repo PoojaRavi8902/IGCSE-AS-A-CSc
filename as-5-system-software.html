@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AS Level Computer Science – Chapter 5: System Software</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.8;
+      margin: 0;
+      background: #f9fbfd;
+      color: #2c3e50;
+    }
+    header {
+      background: #34495e;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 5px solid #2ecc71;
+    }
+    header h1 {margin: 0; font-size: 2em;}
+    header p {margin: 5px 0 0; font-style: italic;}
+    nav {
+      background: #2ecc71;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #fff;
+      margin: 5px 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {text-decoration: underline;}
+    main {padding: 20px; max-width: 1000px; margin: auto;}
+    h2 {border-bottom: 2px solid #2ecc71; padding-bottom: 5px; margin-top: 40px;}
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .key-term {border-left: 6px solid #3498db; background: #ecf6ff; padding: 10px; margin: 15px 0;}
+    .example {border-left: 6px solid #2ecc71; background: #edfff5; padding: 10px; margin: 15px 0;}
+    .task {border-left: 6px solid #f1c40f; background: #fff9e6; padding: 10px; margin: 15px 0;}
+    .exam-tip {border-left: 6px solid #e74c3c; background: #ffecec; padding: 10px; margin: 15px 0;}
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+    .summary {background: #ecf0f1; padding: 15px; margin-top: 20px; border-radius: 8px;}
+    footer {
+      background: #34495e;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AS Computer Science – Chapter 5: System Software</h1>
+    <p>Prepared by Ravi Raju</p>
+  </header>
+
+  <nav>
+    <a href="#translators">Translators</a>
+    <a href="#operating-systems">Operating Systems</a>
+    <a href="#utilities">Utilities</a>
+    <a href="#summary">Summary</a>
+    <a href="#assessment">Assessment</a>
+  </nav>
+
+  <main>
+    <section id="translators" class="card">
+      <h2>Translators</h2>
+      <p>Programs written in high-level or assembly languages cannot be directly executed by the CPU. Translators bridge this gap by converting source code into machine code.</p>
+
+      <div class="key-term"><strong>Key Term:</strong> Translator – A program that converts source code into machine-readable machine code.</div>
+
+      <h3>Compiler</h3>
+      <p>A compiler translates the entire program into machine code at once, creating a standalone executable file. Once compiled, the program runs very quickly.</p>
+      <div class="example"><strong>Example:</strong> GCC compiles C programs into efficient executables.</div>
+      <div class="exam-tip"><strong>Exam Tip:</strong> Remember that compiled programs take longer to prepare but execute faster.</div>
+
+      <h3>Interpreter</h3>
+      <p>An interpreter translates source code line-by-line, executing it immediately. While slower, it allows for real-time debugging.</p>
+      <div class="example"><strong>Example:</strong> Python uses an interpreter, making it excellent for rapid prototyping.</div>
+
+      <h3>Assembler</h3>
+      <p>An assembler converts assembly language into machine code. Assembly language is low-level but easier than binary for humans to understand.</p>
+
+      <h3>Comparison</h3>
+      <div class="comparison">
+        <div class="card"><strong>Compiler</strong><br>Translates whole program<br>Produces executable<br>Fast execution<br>Slow initial compile</div>
+        <div class="card"><strong>Interpreter</strong><br>Translates line by line<br>No executable produced<br>Slower execution<br>Excellent for debugging</div>
+      </div>
+      <div class="comparison">
+        <div class="card"><strong>Assembler</strong><br>Translates assembly<br>Low-level but readable<br>Hardware-specific</div>
+        <div class="card"><strong>Exam Tip</strong><br>Questions often ask to <em>compare</em> compiler vs interpreter – focus on execution speed, debugging, and executables.</div>
+      </div>
+    </section>
+
+    <section id="operating-systems" class="card">
+      <h2>Operating Systems</h2>
+      <p>An Operating System (OS) is the core software that manages hardware and software resources, enabling user interaction with the system.</p>
+
+      <h3>Core Functions</h3>
+      <ul>
+        <li><strong>Memory Management:</strong> Allocates and deallocates memory between processes.</li>
+        <li><strong>Processor Scheduling:</strong> Determines which processes use the CPU and when.</li>
+        <li><strong>File Management:</strong> Controls data storage, retrieval, and permissions.</li>
+        <li><strong>Device Management:</strong> Manages printers, keyboards, monitors, etc.</li>
+        <li><strong>Security:</strong> Provides authentication, encryption, and access control.</li>
+        <li><strong>User Interface:</strong> Supplies CLI or GUI for human-computer interaction.</li>
+      </ul>
+
+      <div class="task"><strong>Task:</strong> Compare how Linux, Windows, and macOS handle security updates differently.</div>
+
+      <div class="exam-tip"><strong>Exam Tip:</strong> Be ready to give <em>examples</em> of OS functions in real life (e.g., Task Manager = process scheduling).</div>
+    </section>
+
+    <section id="utilities" class="card">
+      <h2>Utility Programs</h2>
+      <p>Utility software performs specialized tasks to maintain, optimize, or protect the system.</p>
+
+      <ul>
+        <li><strong>Backup:</strong> Creates copies of data for recovery after loss.</li>
+        <li><strong>Antivirus:</strong> Protects against viruses and malware.</li>
+        <li><strong>Compression:</strong> Reduces file sizes for storage or transfer.</li>
+        <li><strong>Disk Management:</strong> Formats, partitions, and monitors disk health.</li>
+      </ul>
+
+      <div class="example"><strong>Case Study:</strong> Hospitals use RAID backup utilities to ensure patient records are never lost.</div>
+    </section>
+
+    <section id="summary" class="card">
+      <h2>Summary & Revision Checklist</h2>
+      <div class="summary">
+        <ul>
+          <li>Translators: compiler, interpreter, assembler.</li>
+          <li>OS: manages memory, CPU, files, devices, security, and UI.</li>
+          <li>Utilities: backup, antivirus, compression, disk management.</li>
+        </ul>
+        <p><strong>Revision Tip:</strong> Make flashcards for translator differences. Practice past paper questions on OS scheduling.</p>
+      </div>
+    </section>
+
+    <section id="assessment" class="card">
+      <h2>Assessment</h2>
+      <p>Test your knowledge with a dedicated assessment for this chapter.</p>
+      <p><a href="as-5-assessment.html" target="_blank">Open Chapter 5 Assessment</a></p>
+      <p><em>Includes 20 MCQs, 6 structured questions, and a mark scheme.</em></p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Prepared by Ravi Raju | AS Level Computer Science Resources
+  </footer>
+</body>
+</html>
